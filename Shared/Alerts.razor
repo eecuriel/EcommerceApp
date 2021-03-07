@@ -1,0 +1,48 @@
+
+
+
+@if (AlertType =="primary") {
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            @Htmlstring
+            
+        </div>
+
+}else if(AlertType =="secondary") {
+
+    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+        @Htmlstring
+        
+    </div>
+
+}else if(AlertType =="success"){
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @Htmlstring
+        
+        </div>
+}else if(AlertType =="danger"){
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @Htmlstring
+    
+    </div>
+    
+}else if(AlertType =="warning"){
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @Htmlstring
+        
+        </div>
+}else if(AlertType =="info"){
+
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        @Htmlstring
+        
+    </div>
+}
+
+
+@code{
+
+    [Parameter] public String Htmlstring {get; set;}
+    [Parameter] public String AlertType {get; set;}
+
+
+}

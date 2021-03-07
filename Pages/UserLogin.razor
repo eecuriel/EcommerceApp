@@ -1,0 +1,51 @@
+@page "/UserLogin"
+@layout LoginLayout
+@inject HttpClient Http
+@using System.Net.Http.Json;
+@using System.Text.Json
+@inject NavigationManager nav
+
+
+<LoginForm OnValidSubmit="PostRequestLogin" LoginModel="usrLogin" />
+
+
+@if (loadingbit == 2) {
+    <FaderCount>
+        <Alerts  Htmlstring=@errorMesssage  AlertType ="danger" />
+    </FaderCount>
+}else{
+    <FaderCount>
+    <LoadingModal/>
+    </FaderCount>
+}
+
+@code{
+
+    private LoginData usrLogin = new LoginData();
+    string errorMesssage ="";
+    int loadingbit = 0;
+
+
+    private async Task PostRequestLogin()
+    {
+        var newLoging =  new LoginData {
+
+            Email = usrLogin.Email,
+            Password = usrLogin.Password
+
+        };
+        //var BaseAddress = Http.BaseAddress;
+        var Uri =  "api/UserAccount/Login";
+        var response = await Http.PostAsJsonAsync(Uri,newLoging);
+        var result = await response.Content.ReadFromJsonAsync<UserToken>();
+    
+        var token = result.token;
+            if (token != null){
+                nav.NavigateTo("/Index");
+            } else  {
+                loadingbit =2;
+                errorMesssage = $"Error : Bad Login";
+            } 
+    }
+
+}

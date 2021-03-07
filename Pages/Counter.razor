@@ -1,16 +1,30 @@
 @page "/counter"
-
+@using System.Threading;
 <h1>Counter</h1>
 
-<p>Current count: @currentCount</p>
+<h1>@Count</h1>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button @onclick=@StartCountdown>Start Timer</button>
 
-@code {
-    private int currentCount = 0;
+@functions {
+    private int Count { get; set; } = 10;
 
-    private void IncrementCount()
+    void StartCountdown()
     {
-        currentCount++;
+        var timer = new Timer(new TimerCallback(_ =>
+        {
+            if (Count > 0)
+            {
+                Count--;
+
+                // Note that the following line is necessary because otherwise
+                // Blazor would not recognize the state change and not refresh the UI
+                InvokeAsync(() =>
+                {
+
+                    StateHasChanged();
+                });
+            }
+        }), null, 1000, 1000);
     }
 }

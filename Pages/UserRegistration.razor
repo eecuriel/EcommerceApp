@@ -1,0 +1,42 @@
+@page "/"
+@layout LoginLayout
+@inject HttpClient Http
+@using System.Net.Http.Json;
+@using System.Text.Json;
+@inject NavigationManager nav
+
+<RegistrationForm OnValidSubmit="PostUserRegistration" UserRegistration="UserRegistrationModel" />
+
+@code {
+    
+    private UserRegistrationData UserRegistrationModel = new UserRegistrationData();
+
+    private async Task PostUserRegistration(){
+
+        var newUser =  new UserRegistrationData {
+
+            Email = UserRegistrationModel.Email,
+            Password = UserRegistrationModel.Password,
+            ConfirmPassword = UserRegistrationModel.ConfirmPassword
+
+        };
+        //var BaseAddress = Http.BaseAddress;
+        var Uri =  "api/UserAccount/CreateUser";
+        var response = await Http.PostAsJsonAsync(Uri,newUser);
+        var result = await response.Content.ReadAsStringAsync();
+        
+
+            if ( result.ToString() =="Email was sent!"){
+                
+                nav.NavigateTo("/Confirmationscreen");
+                
+            } else  {
+                var __error = "Bad Login data!";
+                Console.WriteLine($"Error : {__error}");
+            } 
+
+        }
+    
+
+}
+

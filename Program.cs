@@ -19,6 +19,13 @@ namespace Project_FrontEnd
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
+            builder.Services.AddScoped(sp => 
+            new HttpClient
+            {
+                BaseAddress = new Uri("https://localhost:444/")
+                //BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
+            });
+
             await builder.Build().RunAsync();
         }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h128jQ5RWm8OQ5GYZDi4idUERULDR6MiA3u6ksKN8j64A498ViI+G/Kz3B4bvTWqwJ5lzjEY95YFY50tbRln7Q==",
+  "dgSpecHash": "Sv1tUHJxJFBsikw/AGi8/3ueamx9Wen1JXQrGD1sY8U+PoH4d7628muIoI21JHh6pYpiTvPh+Nt9dGKeFXlOCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\Project FrontEnd\\Project FrontEnd.csproj",
+  "projectFilePath": "C:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Project FrontEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.3\\microsoft.aspnetcore.authorization.5.0.3.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.3\\microsoft.aspnetcore.components.5.0.3.nupkg.sha512",
