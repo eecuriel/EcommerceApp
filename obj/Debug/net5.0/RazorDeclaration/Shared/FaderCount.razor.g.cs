@@ -90,6 +90,13 @@ using AdminPortal.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 13 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\FaderCount.razor"
 using System.Threading;
 

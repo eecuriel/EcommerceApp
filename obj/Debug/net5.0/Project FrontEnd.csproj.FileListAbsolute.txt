@@ -1283,3 +1283,8 @@ C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\FaderCount.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Shared\LoadingModal.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\LoadingModal.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin\Debug\net5.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin\Debug\net5.0\wwwroot\_framework\Blazored.LocalStorage.dll
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\build-gz\aEgsQaNF.gz
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\UserLogout.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\UserLogout.razor.g.cs

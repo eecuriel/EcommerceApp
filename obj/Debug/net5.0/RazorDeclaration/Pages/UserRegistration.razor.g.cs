@@ -83,6 +83,20 @@ using AdminPortal.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+using System.Threading;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 4 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\UserRegistration.razor"
 using System.Net.Http.Json;
 
@@ -106,13 +120,16 @@ using System.Text.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 10 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\UserRegistration.razor"
+#line 21 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\UserRegistration.razor"
        
     
     private UserRegistrationData UserRegistrationModel = new UserRegistrationData();
+    string errorMesssage ="";
+    int loadingbit = 0;
 
     private async Task PostUserRegistration(){
 
+        loadingbit =1;
         var newUser =  new UserRegistrationData {
 
             Email = UserRegistrationModel.Email,
@@ -120,19 +137,17 @@ using System.Text.Json;
             ConfirmPassword = UserRegistrationModel.ConfirmPassword
 
         };
-        //var BaseAddress = Http.BaseAddress;
+        
         var Uri =  "api/UserAccount/CreateUser";
         var response = await Http.PostAsJsonAsync(Uri,newUser);
+        Thread.Sleep(10000);
         var result = await response.Content.ReadAsStringAsync();
-        
-
+    
             if ( result.ToString() =="Email was sent!"){
-                
                 nav.NavigateTo("/Confirmationscreen");
-                
             } else  {
-                var __error = "Bad Login data!";
-                Console.WriteLine($"Error : {__error}");
+                loadingbit =2;
+                errorMesssage = $"Error : Bad Registration";
             } 
 
         }

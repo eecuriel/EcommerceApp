@@ -83,6 +83,13 @@ using AdminPortal.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 13 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 4 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\UserLogin.razor"
 using System.Net.Http.Json;
 
@@ -92,6 +99,13 @@ using System.Net.Http.Json;
 #nullable restore
 #line 5 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\UserLogin.razor"
 using System.Text.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\UserLogin.razor"
+using System.Threading;
 
 #line default
 #line hidden
@@ -106,16 +120,17 @@ using System.Text.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\UserLogin.razor"
+#line 24 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\UserLogin.razor"
       
 
     private LoginData usrLogin = new LoginData();
     string errorMesssage ="";
     int loadingbit = 0;
 
-
     private async Task PostRequestLogin()
     {
+        
+        loadingbit =1;
         var newLoging =  new LoginData {
 
             Email = usrLogin.Email,
@@ -126,9 +141,11 @@ using System.Text.Json;
         var Uri =  "api/UserAccount/Login";
         var response = await Http.PostAsJsonAsync(Uri,newLoging);
         var result = await response.Content.ReadFromJsonAsync<UserToken>();
-    
+        Thread.Sleep(10000);
         var token = result.token;
             if (token != null){
+                //Session on brower local storage
+                await localStore.SetItemAsync("token", token);
                 nav.NavigateTo("/Index");
             } else  {
                 loadingbit =2;
@@ -141,6 +158,7 @@ using System.Text.Json;
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager nav { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService localStore { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

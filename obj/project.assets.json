@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Blazored.LocalStorage/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.3": {
         "type": "package",
         "dependencies": {
@@ -308,6 +321,19 @@
       }
     },
     "net5.0/browser-wasm": {
+      "Blazored.LocalStorage/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.6",
+          "Microsoft.AspNetCore.Components.Web": "3.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.3": {
         "type": "package",
         "dependencies": {
@@ -615,6 +641,19 @@
     }
   },
   "libraries": {
+    "Blazored.LocalStorage/3.0.0": {
+      "sha512": "eXpHDvog+nRvAFsrqVKqGrpHXuyPTH8tgAremHKbteP5nNEROlItfP8Xh8pNMpTovuQ4tl3NyfQcG0rnbjQ5jw==",
+      "type": "package",
+      "path": "blazored.localstorage/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.localstorage.3.0.0.nupkg.sha512",
+        "blazored.localstorage.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/Blazored.LocalStorage.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/5.0.3": {
       "sha512": "yMX0DKFtLOiWsRfBJKTTRXCv2s//H801R5fP9uyf7/IjgGwUsnLWo/SUnB475SoFNFvurPRzW/J0UYPHWw9lrA==",
       "type": "package",
@@ -1138,6 +1177,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Blazored.LocalStorage >= 3.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.3",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.3",
       "System.Net.Http.Json >= 5.0.0"
@@ -1150,11 +1190,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Project FrontEnd.csproj",
+      "projectUniqueName": "C:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Project FrontEnd.csproj",
       "projectName": "Project FrontEnd",
-      "projectPath": "c:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Project FrontEnd.csproj",
+      "projectPath": "C:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Project FrontEnd.csproj",
       "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\obj\\",
+      "outputPath": "C:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -1187,6 +1227,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Blazored.LocalStorage": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[5.0.3, )"

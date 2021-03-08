@@ -8,35 +8,35 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -1039443061,
+        "HashCode": 1530078291,
         "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.App",
+        "Name": "Project_FrontEnd.Pages.FetchData",
         "AssemblyName": "Project FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "FetchData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.App"
+          "Common.TypeName": "Project_FrontEnd.Pages.FetchData"
         }
       },
       {
-        "HashCode": 1529396025,
+        "HashCode": 452055201,
         "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.App",
+        "Name": "Project_FrontEnd.Pages.FetchData",
         "AssemblyName": "Project FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Project_FrontEnd.App"
+            "TagName": "Project_FrontEnd.Pages.FetchData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.App",
+          "Common.TypeName": "Project_FrontEnd.Pages.FetchData",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -74,6 +74,39 @@
         }
       },
       {
+        "HashCode": -2002936472,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.Pages.UserRegistration",
+        "AssemblyName": "Project FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "UserRegistration"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.Pages.UserRegistration"
+        }
+      },
+      {
+        "HashCode": 402180686,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.Pages.UserRegistration",
+        "AssemblyName": "Project FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Project_FrontEnd.Pages.UserRegistration"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.Pages.UserRegistration",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1942451834,
         "Kind": "Components.Component",
         "Name": "Project_FrontEnd.Pages.Counter",
@@ -107,39 +140,6 @@
         }
       },
       {
-        "HashCode": 1530078291,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Pages.FetchData",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Pages.FetchData"
-        }
-      },
-      {
-        "HashCode": 452055201,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Pages.FetchData",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Project_FrontEnd.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1580214162,
         "Kind": "Components.Component",
         "Name": "Project_FrontEnd.Pages.Index",
@@ -169,39 +169,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Project_FrontEnd.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -2002936472,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Pages.UserRegistration",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "UserRegistration"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Pages.UserRegistration"
-        }
-      },
-      {
-        "HashCode": 402180686,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Pages.UserRegistration",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Project_FrontEnd.Pages.UserRegistration"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Pages.UserRegistration",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -361,92 +328,6 @@
         }
       },
       {
-        "HashCode": -523461823,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Shared.UserTologin",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "UserTologin"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Shared.UserTologin"
-        }
-      },
-      {
-        "HashCode": 1208453661,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Shared.UserTologin",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Project_FrontEnd.Shared.UserTologin"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Shared.UserTologin",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 907419944,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Shared.NavMenu",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": -1524258932,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Shared.NavMenu",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Project_FrontEnd.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -791181027,
         "Kind": "Components.Component",
         "Name": "Project_FrontEnd.Shared.FaderCount",
@@ -539,98 +420,106 @@
         }
       },
       {
-        "HashCode": 1676213279,
+        "HashCode": 1627607979,
         "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Shared.MainLayout",
+        "Name": "Project_FrontEnd.Shared.RegistrationForm",
         "AssemblyName": "Project FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "MainLayout"
+            "TagName": "RegistrationForm"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Name": "UserRegistration",
+            "TypeName": "AdminPortal.Models.UserRegistrationData",
             "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
+              "Common.PropertyName": "UserRegistration"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnValidSubmit",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback",
+            "Metadata": {
+              "Common.PropertyName": "OnValidSubmit",
+              "Components.EventCallback": "True"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Shared.MainLayout"
+          "Common.TypeName": "Project_FrontEnd.Shared.RegistrationForm"
         }
       },
       {
-        "HashCode": -1946954677,
+        "HashCode": 305202409,
         "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Shared.MainLayout",
+        "Name": "Project_FrontEnd.Shared.RegistrationForm",
         "AssemblyName": "Project FrontEnd",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Project_FrontEnd.Shared.MainLayout"
+            "TagName": "Project_FrontEnd.Shared.RegistrationForm"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Name": "UserRegistration",
+            "TypeName": "AdminPortal.Models.UserRegistrationData",
             "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
+              "Common.PropertyName": "UserRegistration"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnValidSubmit",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback",
+            "Metadata": {
+              "Common.PropertyName": "OnValidSubmit",
+              "Components.EventCallback": "True"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Shared.MainLayout",
+          "Common.TypeName": "Project_FrontEnd.Shared.RegistrationForm",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": -609228468,
-        "Kind": "Components.ChildContent",
-        "Name": "Project_FrontEnd.Shared.MainLayout.Body",
+        "HashCode": -1156651080,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.Shared.LoadingModal",
         "AssemblyName": "Project FrontEnd",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Body",
-            "ParentTag": "MainLayout"
+            "TagName": "LoadingModal"
           }
         ],
         "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "Project_FrontEnd.Shared.MainLayout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent"
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.Shared.LoadingModal"
         }
       },
       {
-        "HashCode": 1886736384,
-        "Kind": "Components.ChildContent",
-        "Name": "Project_FrontEnd.Shared.MainLayout.Body",
+        "HashCode": 682411277,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.Shared.LoadingModal",
         "AssemblyName": "Project FrontEnd",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Body",
-            "ParentTag": "Project_FrontEnd.Shared.MainLayout"
+            "TagName": "Project_FrontEnd.Shared.LoadingModal"
           }
         ],
         "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "Project_FrontEnd.Shared.MainLayout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent",
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.Shared.LoadingModal",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -731,110 +620,6 @@
         }
       },
       {
-        "HashCode": -1156651080,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Shared.LoadingModal",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LoadingModal"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Shared.LoadingModal"
-        }
-      },
-      {
-        "HashCode": 682411277,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Shared.LoadingModal",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Project_FrontEnd.Shared.LoadingModal"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Shared.LoadingModal",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1627607979,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Shared.RegistrationForm",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RegistrationForm"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "UserRegistration",
-            "TypeName": "AdminPortal.Models.UserRegistrationData",
-            "Metadata": {
-              "Common.PropertyName": "UserRegistration"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "OnValidSubmit",
-            "TypeName": "Microsoft.AspNetCore.Components.EventCallback",
-            "Metadata": {
-              "Common.PropertyName": "OnValidSubmit",
-              "Components.EventCallback": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Shared.RegistrationForm"
-        }
-      },
-      {
-        "HashCode": 305202409,
-        "Kind": "Components.Component",
-        "Name": "Project_FrontEnd.Shared.RegistrationForm",
-        "AssemblyName": "Project FrontEnd",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Project_FrontEnd.Shared.RegistrationForm"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "UserRegistration",
-            "TypeName": "AdminPortal.Models.UserRegistrationData",
-            "Metadata": {
-              "Common.PropertyName": "UserRegistration"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "OnValidSubmit",
-            "TypeName": "Microsoft.AspNetCore.Components.EventCallback",
-            "Metadata": {
-              "Common.PropertyName": "OnValidSubmit",
-              "Components.EventCallback": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Project_FrontEnd.Shared.RegistrationForm",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1951486057,
         "Kind": "Components.Component",
         "Name": "Project_FrontEnd.Shared.LoginForm",
@@ -902,6 +687,221 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Project_FrontEnd.Shared.LoginForm",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -523461823,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.Shared.UserTologin",
+        "AssemblyName": "Project FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "UserTologin"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.Shared.UserTologin"
+        }
+      },
+      {
+        "HashCode": 1208453661,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.Shared.UserTologin",
+        "AssemblyName": "Project FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Project_FrontEnd.Shared.UserTologin"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.Shared.UserTologin",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 907419944,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.Shared.NavMenu",
+        "AssemblyName": "Project FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -1524258932,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.Shared.NavMenu",
+        "AssemblyName": "Project FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Project_FrontEnd.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1676213279,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.Shared.MainLayout",
+        "AssemblyName": "Project FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.Shared.MainLayout"
+        }
+      },
+      {
+        "HashCode": -1946954677,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.Shared.MainLayout",
+        "AssemblyName": "Project FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Project_FrontEnd.Shared.MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.Shared.MainLayout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -609228468,
+        "Kind": "Components.ChildContent",
+        "Name": "Project_FrontEnd.Shared.MainLayout.Body",
+        "AssemblyName": "Project FrontEnd",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Project_FrontEnd.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": 1886736384,
+        "Kind": "Components.ChildContent",
+        "Name": "Project_FrontEnd.Shared.MainLayout.Body",
+        "AssemblyName": "Project FrontEnd",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "Project_FrontEnd.Shared.MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Project_FrontEnd.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1039443061,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.App",
+        "AssemblyName": "Project FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.App"
+        }
+      },
+      {
+        "HashCode": 1529396025,
+        "Kind": "Components.Component",
+        "Name": "Project_FrontEnd.App",
+        "AssemblyName": "Project FrontEnd",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Project_FrontEnd.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Project_FrontEnd.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -13640,6 +13640,11 @@
       "FilePath": "c:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\_Imports.razor",
       "TargetPath": "_Imports.razor",
       "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Pages\\UserLogOut.razor",
+      "TargetPath": "Pages\\UserLogOut.razor",
+      "FileKind": "component"
     },
     {
       "FilePath": "c:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Pages\\UserLogin.razor",
