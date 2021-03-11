@@ -1,6 +1,7 @@
 @page "/UserLogout"
 @inject Blazored.LocalStorage.ILocalStorageService localStore
 @inject NavigationManager nav
+@inject HttpClient Http
 
     <LoadingModal/>
 
@@ -9,7 +10,10 @@
     //User Kill LocalStorage 
 
     protected override async Task OnInitializedAsync(){
-        Thread.Sleep(10000);
+        //Thread.Sleep(10000);
+          //remove Authorization
+        Http.DefaultRequestHeaders.Remove("Authorization");
+        //remove Authorization
         await localStore.ClearAsync();
         nav.NavigateTo("/UserLogin");
     }

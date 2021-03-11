@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "62DjPwiT9YqR3ihtP8Un8vdNAEpjw+THJQEwOS2fq/UTrducTF0LmzBVGuF/x9Wr4It7lD11+SwNdf5RrB4d8w==",
+  "dgSpecHash": "1LlCK1AMrLfIWJNCXJN6n8+B5u6+K+PVzmcHL6qYIB8FSdM1oBbPAy5eQtFs4PBZfHjd/S3La0XlFHUZMaWrWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Project FrontEnd.csproj",
+  "projectFilePath": "c:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Project FrontEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eduar\\.nuget\\packages\\blazored.localstorage\\3.0.0\\blazored.localstorage.3.0.0.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\blazorise\\0.9.3\\blazorise.0.9.3.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\blazorise.bootstrap\\0.9.3\\blazorise.bootstrap.0.9.3.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.3\\microsoft.aspnetcore.authorization.5.0.3.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.3\\microsoft.aspnetcore.components.5.0.3.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.3\\microsoft.aspnetcore.components.analyzers.5.0.3.nupkg.sha512",

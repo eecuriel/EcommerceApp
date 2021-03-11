@@ -97,6 +97,13 @@ using Blazored.LocalStorage;
 #line hidden
 #nullable disable
 #nullable restore
+#line 14 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+using Blazorise;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\Counter.razor"
 using System.Threading;
 

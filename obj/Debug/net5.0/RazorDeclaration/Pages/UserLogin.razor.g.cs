@@ -90,6 +90,13 @@ using Blazored.LocalStorage;
 #line hidden
 #nullable disable
 #nullable restore
+#line 14 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+using Blazorise;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 4 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\UserLogin.razor"
 using System.Net.Http.Json;
 
@@ -126,6 +133,16 @@ using System.Threading;
     private LoginData usrLogin = new LoginData();
     string errorMesssage ="";
     int loadingbit = 0;
+        protected override async Task OnInitializedAsync()
+        {
+            await localStore.ClearAsync();
+        
+        }
+            
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            await localStore.ClearAsync();
+        }
 
     private async Task PostRequestLogin()
     {
@@ -137,19 +154,23 @@ using System.Threading;
             Password = usrLogin.Password
 
         };
-        //var BaseAddress = Http.BaseAddress;
+        //remove Authorization
+        Http.DefaultRequestHeaders.Remove("Authorization");
+        //remove Authorization
         var Uri =  "api/UserAccount/Login";
         var response = await Http.PostAsJsonAsync(Uri,newLoging);
         var result = await response.Content.ReadFromJsonAsync<UserToken>();
         Thread.Sleep(10000);
         var token = result.token;
+        var Id = result.Id;
             if (token != null){
                 //Session on brower local storage
                 await localStore.SetItemAsync("token", token);
-                nav.NavigateTo("/Index");
+                await localStore.SetItemAsync("Id", Id);
+                nav.NavigateTo("/StoreSetup");
             } else  {
                 loadingbit =2;
-                errorMesssage = $"Error : Bad Login";
+                errorMesssage = $"Error : Invalid Login";
             } 
     }
 

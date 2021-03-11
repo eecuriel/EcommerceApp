@@ -26,6 +26,16 @@
     private LoginData usrLogin = new LoginData();
     string errorMesssage ="";
     int loadingbit = 0;
+        protected override async Task OnInitializedAsync()
+        {
+            await localStore.ClearAsync();
+        
+        }
+            
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            await localStore.ClearAsync();
+        }
 
     private async Task PostRequestLogin()
     {
@@ -37,19 +47,23 @@
             Password = usrLogin.Password
 
         };
-        //var BaseAddress = Http.BaseAddress;
+        //remove Authorization
+        Http.DefaultRequestHeaders.Remove("Authorization");
+        //remove Authorization
         var Uri =  "api/UserAccount/Login";
         var response = await Http.PostAsJsonAsync(Uri,newLoging);
         var result = await response.Content.ReadFromJsonAsync<UserToken>();
         Thread.Sleep(10000);
         var token = result.token;
+        var Id = result.Id;
             if (token != null){
                 //Session on brower local storage
                 await localStore.SetItemAsync("token", token);
-                nav.NavigateTo("/Index");
+                await localStore.SetItemAsync("Id", Id);
+                nav.NavigateTo("/StoreSetup");
             } else  {
                 loadingbit =2;
-                errorMesssage = $"Error : Bad Login";
+                errorMesssage = $"Error : Invalid Login";
             } 
     }
 

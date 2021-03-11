@@ -103,6 +103,13 @@ using Blazored.LocalStorage;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+using Blazorise;
+
+#line default
+#line hidden
+#nullable disable
     public partial class RegistrationForm : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -111,7 +118,7 @@ using Blazored.LocalStorage;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 65 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\RegistrationForm.razor"
+#line 74 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\RegistrationForm.razor"
       
         [Parameter] public UserRegistrationData UserRegistration { get; set; }
         [Parameter] public EventCallback OnValidSubmit { get; set; }

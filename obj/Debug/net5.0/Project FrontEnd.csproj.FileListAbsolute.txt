@@ -1288,3 +1288,15 @@ C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\build-gz\aEgsQaNF.gz
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\UserLogout.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\UserLogout.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\StoreSetup.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\StoreSetup.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin\Debug\net5.0\wwwroot\_framework\Blazorise.dll.gz
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin\Debug\net5.0\wwwroot\_framework\Blazorise.Bootstrap.dll.gz
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin\Debug\net5.0\wwwroot\_framework\Blazorise.dll
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin\Debug\net5.0\wwwroot\_framework\Blazorise.Bootstrap.dll
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\build-gz\DEjblvLE.gz
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\build-gz\DaoVPP2+.gz
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Shared\StoreCreateForm.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\StoreCreateForm.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Shared\InputextStoreName.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\InputextStoreName.razor.g.cs

@@ -1,0 +1,48 @@
+@inject HttpClient Http
+@using System.Net.Http.Json
+@using System.Text.Json
+@using System.Threading
+@using AdminPortal.Helpers
+@inject Blazored.LocalStorage.ILocalStorageService localStore
+@inject NavigationManager nav
+
+
+
+<div class="input-group mb-3">
+@if (requestValidator== "valid") {
+       <span class="input-group-text" id="basic-addon1">
+       <i class="fas fa-check text-success" style="Width:15px;Height:15px;font-size:16px;"></i>
+       </span>
+       }else if(requestValidator == "invalid") {
+       <span class="input-group-text" id="basic-addon1">
+       <i class="fas fa-times text-danger" style="Width:15px;Height:15px;font-size:16px;"></i>  
+       </span>
+}
+<input type="text" placeholder="Store Short Name" class="form-control" maxlength ="10" value="@Value" @oninput="@OnInputChange" />
+</div>
+<div class="input-group mb-3">
+@if (requestValidator== "valid") {
+       <label class="text-danger"></label>  
+       }else if(requestValidator == "invalid") {
+       <label class="text-danger">@requestMesssage</label>    
+}
+</div>
+
+
+@code {
+       [Parameter] public string Value { get; set; }
+       [Parameter] public EventCallback<string> ValueChanged { get; set; }
+       string requestMesssage ="";
+       string requestValidator ="";
+       StoreNameValidator storeVal = new StoreNameValidator();
+       
+private async Task OnInputChange(ChangeEventArgs args )
+{
+       Value = (string)args.Value;
+       string[] requestResponse = await storeVal.StoreValidationByShortName(Value, Http, localStore);
+       requestValidator = requestResponse[0];
+       requestMesssage = requestResponse[1];
+
+}
+
+}

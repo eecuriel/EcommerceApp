@@ -15,6 +15,52 @@
           "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
         }
       },
+      "Blazorise/0.9.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/Blazorise.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.props": {}
+        }
+      },
+      "Blazorise.Bootstrap/0.9.3": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "0.9.3",
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.Bootstrap.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.Bootstrap.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazorise.Bootstrap.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.Bootstrap.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.3": {
         "type": "package",
         "dependencies": {
@@ -332,6 +378,52 @@
         },
         "runtime": {
           "lib/netstandard2.1/Blazored.LocalStorage.dll": {}
+        }
+      },
+      "Blazorise/0.9.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/Blazorise.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.props": {}
+        }
+      },
+      "Blazorise.Bootstrap/0.9.3": {
+        "type": "package",
+        "dependencies": {
+          "Blazorise": "0.9.3",
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.Bootstrap.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.Bootstrap.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazorise.Bootstrap.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazorise.Bootstrap.props": {}
         }
       },
       "Microsoft.AspNetCore.Authorization/5.0.3": {
@@ -652,6 +744,80 @@
         "blazored.localstorage.nuspec",
         "icon.png",
         "lib/netstandard2.1/Blazored.LocalStorage.dll"
+      ]
+    },
+    "Blazorise/0.9.3": {
+      "sha512": "fQOQ+A7yVtIRu0n8wsHeZW8rjd61/HsQ7vFf+6/eD6R1pIVqiIfo9IIbGesBKTQKyRsNIehaHyPEmt8h6qZyOg==",
+      "type": "package",
+      "path": "blazorise/0.9.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.0.9.3.nupkg.sha512",
+        "blazorise.nuspec",
+        "build/Blazorise.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.props",
+        "buildTransitive/Blazorise.props",
+        "content/Resources/Localization/Carousel/de.json",
+        "content/Resources/Localization/Carousel/en.json",
+        "content/Resources/Localization/Carousel/es.json",
+        "content/Resources/Localization/Carousel/fr.json",
+        "content/Resources/Localization/Carousel/hr.json",
+        "content/Resources/Localization/Carousel/it.json",
+        "content/Resources/Localization/Carousel/nl.json",
+        "content/Resources/Localization/Carousel/pt.json",
+        "content/Resources/Localization/FileEdit/de.json",
+        "content/Resources/Localization/FileEdit/en.json",
+        "content/Resources/Localization/FileEdit/es.json",
+        "content/Resources/Localization/FileEdit/fr.json",
+        "content/Resources/Localization/FileEdit/hr.json",
+        "content/Resources/Localization/FileEdit/it.json",
+        "content/Resources/Localization/FileEdit/nl.json",
+        "content/Resources/Localization/FileEdit/pt.json",
+        "content/compilerconfig.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/de.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/en.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/es.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/fr.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/hr.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/it.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/nl.json",
+        "contentFiles/any/net5.0/Resources/Localization/Carousel/pt.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/de.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/en.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/es.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/fr.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/hr.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/it.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/nl.json",
+        "contentFiles/any/net5.0/Resources/Localization/FileEdit/pt.json",
+        "contentFiles/any/net5.0/compilerconfig.json",
+        "lib/net5.0/Blazorise.dll",
+        "staticwebassets/blazorise.css",
+        "staticwebassets/blazorise.js"
+      ]
+    },
+    "Blazorise.Bootstrap/0.9.3": {
+      "sha512": "lQ3OxcgSMGf3plTdzYt8eAROM2X9YJ2mOduiStCRfSOqbvyviE69kL81sbQ3sD+jPihL093PEQVfQCyzvWGHYA==",
+      "type": "package",
+      "path": "blazorise.bootstrap/0.9.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Blazorise.png",
+        "LICENSE.md",
+        "blazorise.bootstrap.0.9.3.nupkg.sha512",
+        "blazorise.bootstrap.nuspec",
+        "build/Blazorise.Bootstrap.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazorise.Bootstrap.props",
+        "buildTransitive/Blazorise.Bootstrap.props",
+        "lib/net5.0/Blazorise.Bootstrap.dll",
+        "staticwebassets/blazorise.bootstrap.css",
+        "staticwebassets/blazorise.bootstrap.js"
       ]
     },
     "Microsoft.AspNetCore.Authorization/5.0.3": {
@@ -1178,6 +1344,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Blazored.LocalStorage >= 3.0.0",
+      "Blazorise.Bootstrap >= 0.9.3",
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.3",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.3",
       "System.Net.Http.Json >= 5.0.0"
@@ -1230,6 +1397,10 @@
           "Blazored.LocalStorage": {
             "target": "Package",
             "version": "[3.0.0, )"
+          },
+          "Blazorise.Bootstrap": {
+            "target": "Package",
+            "version": "[0.9.3, )"
           },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",

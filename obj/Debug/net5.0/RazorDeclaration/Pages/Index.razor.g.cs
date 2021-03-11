@@ -103,6 +103,13 @@ using Blazored.LocalStorage;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+using Blazorise;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Index")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -111,6 +118,25 @@ using Blazored.LocalStorage;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 12 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\Index.razor"
+      
+
+    /*protected override void OnInitialized()
+        {
+        StoreValidationByUser();
+        }
+
+    async void StoreValidationByUser() {
+
+        
+    } */
+
+
+
+#line default
+#line hidden
+#nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService localStore { get; set; }
     }
 }

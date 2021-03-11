@@ -103,6 +103,13 @@ using Blazored.LocalStorage;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+using Blazorise;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/UserLogout")]
     public partial class UserLogout : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -112,13 +119,16 @@ using Blazored.LocalStorage;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 7 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\UserLogout.razor"
+#line 8 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\UserLogout.razor"
        
 
     //User Kill LocalStorage 
 
     protected override async Task OnInitializedAsync(){
-        Thread.Sleep(10000);
+        //Thread.Sleep(10000);
+          //remove Authorization
+        Http.DefaultRequestHeaders.Remove("Authorization");
+        //remove Authorization
         await localStore.ClearAsync();
         nav.NavigateTo("/UserLogin");
     }
@@ -127,6 +137,7 @@ using Blazored.LocalStorage;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager nav { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService localStore { get; set; }
     }

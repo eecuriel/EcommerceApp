@@ -1,11 +1,20 @@
 {
     "version": "0.2.0",
     "configurations": [
+
+    
         {
             "name": "Launch and Debug Standalone Blazor WebAssembly App",
             "type": "blazorwasm",
             "request": "launch",
             "cwd": "${workspaceFolder}"
         }
+
+        {
+            "type": "blazorwasm",
+            "request": "attach",
+            "name": "Attach to Existing Blazor WebAssembly Application"
+        }
+
     ]
 }

@@ -1,4 +1,6 @@
 ﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="_content/Blazorise" Path="C:\Users\eduar\.nuget\packages\blazorise\0.9.3\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Blazorise.Bootstrap" Path="C:\Users\eduar\.nuget\packages\blazorise.bootstrap\0.9.3\build\..\staticwebassets\" />
   <ContentRoot BasePath="/" Path="C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin\Debug\net5.0\wwwroot\" />
   <ContentRoot BasePath="/" Path="C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\scopedcss\bundle\" />
 </StaticWebAssets>
