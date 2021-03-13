@@ -4,9 +4,11 @@
 @using System.Net.Http.Json
 @using System.Text.Json
 @using System.Threading
-@using AdminPortal.Helpers
+@using AdminPortal.Services
 @inject Blazored.LocalStorage.ILocalStorageService localStore
 @inject NavigationManager nav
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+
 
 
 <div class="container justify-content-md-center"> 

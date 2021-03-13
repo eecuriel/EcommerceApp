@@ -1,3 +1,7 @@
+@using AdminPortal.Services
+@inject StoreDataService storeDataService
+@inject NavigationManager nav
+
 
 <div class="container">
     <div class="main-body">
@@ -11,8 +15,8 @@
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>Store Full Name</h4>
-                      <p class="text-secondary mb-1">Store Short Name</p>
+                      <h4>@store.StoreName</h4>
+                      <p class="text-secondary mb-1">@store.StoreShortName</p>
                       <button class="btn btn-primary"><i class="fas fa-camera"></i> Change Store logo</button>
                     </div>
                   </div>
@@ -22,7 +26,7 @@
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Store URL</h6>
-                    <span class="text-secondary">https://storeurl.com</span>
+                    <span class="text-secondary">@storeURL</span>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter mr-2 icon-inline text-info"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>Twitter</h6>
@@ -148,3 +152,17 @@
             </div>
           </div>
         </div>
+
+        @code {
+
+            private Store store =  new Store();
+            string storeURL = "";
+
+
+            protected override async Task OnInitializedAsync()
+            {
+                  store = await storeDataService.getStoreData();
+                  storeURL = $"{nav.BaseUri}/{store.StoreShortName}";
+            }
+
+        }

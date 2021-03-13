@@ -2,9 +2,10 @@
 @using System.Net.Http.Json
 @using System.Text.Json
 @using System.Threading
-@using AdminPortal.Helpers
+@using AdminPortal.Services
 @inject Blazored.LocalStorage.ILocalStorageService localStore
 @inject NavigationManager nav
+@inject StoreDataService storeDataService
 
 
 
@@ -34,12 +35,11 @@
        [Parameter] public EventCallback<string> ValueChanged { get; set; }
        string requestMesssage ="";
        string requestValidator ="";
-       StoreNameValidator storeVal = new StoreNameValidator();
        
 private async Task OnInputChange(ChangeEventArgs args )
 {
        Value = (string)args.Value;
-       string[] requestResponse = await storeVal.StoreValidationByShortName(Value, Http, localStore);
+       string[] requestResponse = await storeDataService.StoreValidationByShortName(Value);
        requestValidator = requestResponse[0];
        requestMesssage = requestResponse[1];
 

@@ -10,7 +10,8 @@ using Microsoft.Extensions.Logging;
 using Blazored.LocalStorage;
 using Blazorise;
 using Blazorise.Bootstrap;
-using AdminPortal.Helpers;
+using AdminPortal.Services;
+using Blazored.SessionStorage;
 
 namespace Project_FrontEnd
 {
@@ -22,7 +23,14 @@ namespace Project_FrontEnd
             builder.RootComponents.Add<App>("#app");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-            builder.Services.AddBlazoredLocalStorage();
+            builder.Services
+            .AddBlazoredLocalStorage()
+            .AddScoped<StoreDataService>(); 
+
+            builder.Services
+            .AddBlazoredSessionStorage()
+            .AddScoped<StoreDataService>(); 
+            
 
             builder.Services
             .AddBlazorise( options =>

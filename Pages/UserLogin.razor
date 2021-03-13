@@ -4,9 +4,11 @@
 @using System.Net.Http.Json;
 @using System.Text.Json
 @using System.Threading
-@using AdminPortal.Helpers
+@using AdminPortal.Services
 @inject Blazored.LocalStorage.ILocalStorageService localStore
 @inject NavigationManager nav
+@inject StoreDataService storeDataService
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 
 <LoginForm OnValidSubmit="PostRequestLogin" LoginModel="usrLogin" />
@@ -29,7 +31,6 @@
     int loadingbit = 0;
 
     string navEvaluation ="";
-    StoreNameValidator storeVal = new StoreNameValidator();
         protected override async Task OnInitializedAsync()
         {
             await localStore.ClearAsync();
@@ -61,11 +62,13 @@
         var Id = result.Id;
             if (token != null){
                 //Session on brower local storage
-                await localStore.SetItemAsync("token", token);
+                //await localStore.SetItemAsync("token", token);
+                await sessionStorage.SetItemAsync("token", token);
                 await localStore.SetItemAsync("Id", Id);
 
-                
-                navEvaluation = await storeVal.StoreValidationByUser(Http,localStore);
+
+
+                navEvaluation = await storeDataService.StoreValidationByUser();
                 
                 if (navEvaluation == "1"){
                     nav.NavigateTo("/Index");

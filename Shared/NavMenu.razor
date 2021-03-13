@@ -1,8 +1,12 @@
-﻿@inject Blazored.LocalStorage.ILocalStorageService localStore
+﻿@using AdminPortal.Services
+@inject Blazored.LocalStorage.ILocalStorageService localStore
 @inject NavigationManager nav
+@inject HttpClient http
+@inject StoreDataService storeDataService
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="Index">@StoreName</a>
+    <a class="navbar-brand" href="Index">@storeName</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,6 +30,11 @@
             </NavLink>
         </li>
         <li class="nav-item px-3">
+            <NavLink class="nav-link" href="Customers">
+                <span class="oi oi-briefcase" aria-hidden="true" ></span> Suppliers
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
             <NavLink class="nav-link" href="Catalogs">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Catalogs
             </NavLink>
@@ -45,7 +54,7 @@
 
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="Reports">
-                <span class="oi oi-bar-chart" aria-hidden="true"></span> Reports
+            <span class="oi oi-pie-chart" aria-hidden="true" ></span> Reports
             </NavLink>
         </li>
 
@@ -56,6 +65,8 @@
                 </DropdownToggle>
                 <DropdownMenu>
                     <DropdownItem ><label class="text-primary">Order Type</label></DropdownItem>
+                    <DropdownDivider />
+                    <DropdownItem ><label class="text-primary">Items types</label></DropdownItem>
                     <DropdownDivider />
                     <DropdownItem ><label class="text-primary">Sales Categories</label></DropdownItem>
                     <DropdownDivider />
@@ -80,7 +91,8 @@
 @code {
     private bool collapseNavMenu = true;
     bool valtoken;
-    string StoreName ="Store Name";
+    string storeName ="";
+
 
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
@@ -91,12 +103,23 @@
 
     protected override async Task OnInitializedAsync()
     {
-        valtoken = await localStore.ContainKeyAsync("token");
-        if (valtoken == false) {
+        try {
+        storeName = await storeDataService.getStoreName();
+        valtoken = await sessionStorage.ContainKeyAsync("token");
+    
+        if (valtoken == false ) {
             nav.NavigateTo("/UserLogin");
         }
 
+        } catch (Exception e) {
+            if (e.Message.Length > 0){
+                nav.NavigateTo("/UserLogin");
+            }
+        }
+        
+
     }
+
 
 }
 
