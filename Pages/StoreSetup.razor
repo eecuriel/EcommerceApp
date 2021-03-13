@@ -32,7 +32,7 @@
 } else if (setStep ==1){
     <div class="container justify-content-md-center">
         <div class="row ">
-            <div class="col col-12">
+            <div class="col col-12 col-sm">
                 <div class="card align-middle shadow-lg p-3 mb-5 bg-body rounded">
                     <div class="card-body">
                         <div class="row">
@@ -58,6 +58,15 @@
     </div>
 </div>
 
+@if (loadingbit == 2) {
+    <FaderCount>
+        <Alerts  Htmlstring=@errorMesssage  AlertType ="danger" />
+    </FaderCount>
+}else if (loadingbit == 1){
+    <FaderCount>
+    <LoadingModal/>
+    </FaderCount>
+}
 
 @code{
     private string selectedSlide = "3";
@@ -67,29 +76,6 @@
     int loadingbit = 0;
     string  ownerId ="";
     string storeShortName ="";
-
-    protected override void OnInitialized()
-        {
-        StoreValidationByUser();
-        }
-
-    async void StoreValidationByUser() {
-
-        ownerId = await localStore.GetItemAsStringAsync("Id");
-
-        var Uri =  $"api/Store/Stores/UserId/{ownerId}";
-        //End point unique authorization
-        var token = await localStore.GetItemAsStringAsync("token");
-        Http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-        //End point unique authorization
-        var response = await Http.GetAsync(Uri);
-        var result = await response.Content.ReadFromJsonAsync<Store>();
-            var UserId = result.UserId;
-            if (UserId == ownerId){
-                nav.NavigateTo("/Index");
-            } 
-    } 
-
     async void ShowStep(int step){
         setStep = step;
         storeShortName = await localStore.GetItemAsStringAsync("StoreName");
@@ -97,9 +83,6 @@
     private async Task PostStoreRegistration()
     {
 
-        //try {
-    
-        //if (loadingbit == 1) {
         ownerId = await localStore.GetItemAsStringAsync("Id");
         storeShortName = await localStore.GetItemAsStringAsync("StoreName");
         loadingbit =1;
@@ -124,13 +107,6 @@
                 loadingbit =2;
                 errorMesssage = $"Error : Not Created";
             } 
-       // } else if ( loadingbit == 2){
-           // errorMesssage = $"Exist an store with this name.";
-        //}
-    /* } catch (Exception e){
-            loadingbit = 2;
-            errorMesssage = $"{e.Message}";
-        }*/
     }
 
 }

@@ -6,18 +6,29 @@
     </div>
 
         <div class="main">
-        <ul class="nav justify-content-end">
+        <ul class="nav justify-content-end" style="margin-right:10%;">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/UserLogout">Log Out</a>
+            <a class="nav-link" href="#"><i class="fas fa-envelope-open-text"></i></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <Dropdown>
+            <DropdownToggle>
+                    <label><i class="fas fa-user-alt"></i> Profile</label>
+            </DropdownToggle>
+            <DropdownMenu>
+                <DropdownItem><div>
+                    <a class="nav-link active" aria-current="page" href="/StoreProfilePage"><i class="fas fa-store"></i> Store profile</a>
+                </div>
+                </DropdownItem>
+                <DropdownDivider />
+                <DropdownItem>
+                <div>
+                    <a class="nav-link active" aria-current="page" href="/UserLogout"> <i class="fas fa-sign-out-alt"></i> Log Out</a>
+                </div>
+                </DropdownItem>
+            </DropdownMenu>
+            </Dropdown>
+
         </li>
         </ul>
 

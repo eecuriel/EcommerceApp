@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1LlCK1AMrLfIWJNCXJN6n8+B5u6+K+PVzmcHL6qYIB8FSdM1oBbPAy5eQtFs4PBZfHjd/S3La0XlFHUZMaWrWA==",
+  "dgSpecHash": "b2mwFvi/vjS3+YBZj8ePVoIWkaktLfcGhfrVHMzs5wggWTksUhyEDP0USMSw9vwMvjRsZWvxMeQh76O8EMyf+w==",
   "success": true,
-  "projectFilePath": "c:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Project FrontEnd.csproj",
+  "projectFilePath": "C:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Project FrontEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eduar\\.nuget\\packages\\blazored.localstorage\\3.0.0\\blazored.localstorage.3.0.0.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\blazorise\\0.9.3\\blazorise.0.9.3.nupkg.sha512",

@@ -62,6 +62,28 @@ namespace AdminPortal.Helpers
     
     } 
 
+    public async ValueTask<string> StoreValidationByUser(HttpClient http,ILocalStorageService localStorage ) {
+
+        var ownerId = await localStorage.GetItemAsStringAsync("Id");
+        string navEvaluation ="";
+
+        var Uri =  $"api/Store/Stores/UserId/{ownerId}";
+        //End point unique authorization
+        var token = await localStorage.GetItemAsStringAsync("token");
+        http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+        //End point unique authorization
+        var response = await http.GetAsync(Uri);
+        var result = await response.Content.ReadFromJsonAsync<Store>();
+            var UserId = result.UserId;
+            if (UserId == ownerId){
+                navEvaluation = "1";
+            } else {
+                navEvaluation = "2";
+            }
+
+            return navEvaluation;
+    } 
+
     }
 
 } 

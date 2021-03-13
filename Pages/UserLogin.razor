@@ -4,6 +4,7 @@
 @using System.Net.Http.Json;
 @using System.Text.Json
 @using System.Threading
+@using AdminPortal.Helpers
 @inject Blazored.LocalStorage.ILocalStorageService localStore
 @inject NavigationManager nav
 
@@ -26,10 +27,12 @@
     private LoginData usrLogin = new LoginData();
     string errorMesssage ="";
     int loadingbit = 0;
+
+    string navEvaluation ="";
+    StoreNameValidator storeVal = new StoreNameValidator();
         protected override async Task OnInitializedAsync()
         {
             await localStore.ClearAsync();
-        
         }
             
         protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -60,12 +63,21 @@
                 //Session on brower local storage
                 await localStore.SetItemAsync("token", token);
                 await localStore.SetItemAsync("Id", Id);
-                nav.NavigateTo("/StoreSetup");
+
+                
+                navEvaluation = await storeVal.StoreValidationByUser(Http,localStore);
+                
+                if (navEvaluation == "1"){
+                    nav.NavigateTo("/Index");
+                }else if (navEvaluation == "2"){
+                    nav.NavigateTo("/StoreSetup");
+                }
             } else  {
                 loadingbit =2;
                 errorMesssage = $"Error : Invalid Login";
             } 
     }
+
 
 }
 

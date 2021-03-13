@@ -13,112 +13,112 @@ namespace Project_FrontEnd.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 1 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 3 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 4 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 5 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 6 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 7 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 8 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 9 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Project_FrontEnd;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 10 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Project_FrontEnd.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 11 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using AdminPortal.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 13 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Blazored.LocalStorage;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 14 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
+#line 14 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Blazorise;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreSetup.razor"
+#line 4 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreSetup.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreSetup.razor"
+#line 5 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreSetup.razor"
 using System.Text.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreSetup.razor"
+#line 6 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreSetup.razor"
 using System.Threading;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreSetup.razor"
+#line 7 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreSetup.razor"
 using AdminPortal.Helpers;
 
 #line default
@@ -134,7 +134,7 @@ using AdminPortal.Helpers;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 62 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreSetup.razor"
+#line 71 "c:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreSetup.razor"
       
     private string selectedSlide = "3";
     int setStep = 0;
@@ -143,29 +143,6 @@ using AdminPortal.Helpers;
     int loadingbit = 0;
     string  ownerId ="";
     string storeShortName ="";
-
-    protected override void OnInitialized()
-        {
-        StoreValidationByUser();
-        }
-
-    async void StoreValidationByUser() {
-
-        ownerId = await localStore.GetItemAsStringAsync("Id");
-
-        var Uri =  $"api/Store/Stores/UserId/{ownerId}";
-        //End point unique authorization
-        var token = await localStore.GetItemAsStringAsync("token");
-        Http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-        //End point unique authorization
-        var response = await Http.GetAsync(Uri);
-        var result = await response.Content.ReadFromJsonAsync<Store>();
-            var UserId = result.UserId;
-            if (UserId == ownerId){
-                nav.NavigateTo("/Index");
-            } 
-    } 
-
     async void ShowStep(int step){
         setStep = step;
         storeShortName = await localStore.GetItemAsStringAsync("StoreName");
@@ -173,9 +150,6 @@ using AdminPortal.Helpers;
     private async Task PostStoreRegistration()
     {
 
-        //try {
-    
-        //if (loadingbit == 1) {
         ownerId = await localStore.GetItemAsStringAsync("Id");
         storeShortName = await localStore.GetItemAsStringAsync("StoreName");
         loadingbit =1;
@@ -200,13 +174,6 @@ using AdminPortal.Helpers;
                 loadingbit =2;
                 errorMesssage = $"Error : Not Created";
             } 
-       // } else if ( loadingbit == 2){
-           // errorMesssage = $"Exist an store with this name.";
-        //}
-    /* } catch (Exception e){
-            loadingbit = 2;
-            errorMesssage = $"{e.Message}";
-        }*/
     }
 
 

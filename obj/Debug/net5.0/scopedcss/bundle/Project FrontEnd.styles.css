@@ -8,7 +8,6 @@
     
 }
 
-
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-0kj7yttxn8] {
     position: relative;
@@ -21,7 +20,7 @@
 }
 
 .sidebar[b-0kj7yttxn8] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #062047 70%);
 }
 
 .top-row[b-0kj7yttxn8] {
@@ -88,6 +87,7 @@
 .top-row[b-k31ptf03w9] {
     height: 3.5rem;
     background-color: rgba(0,0,0,0.4);
+
 }
 
 .navbar-brand[b-k31ptf03w9] {

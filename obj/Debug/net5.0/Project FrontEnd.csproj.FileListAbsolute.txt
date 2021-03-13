@@ -1039,7 +1039,6 @@ C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin\Debug\net5.0\wwwroot\_framework\icudt_no_CJK.dat
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin\Debug\net5.0\wwwroot\_framework\dotnet.5.0.3.js
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
-C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
@@ -1052,7 +1051,6 @@ C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Project FrontEnd.TagHelpers.output.cache
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Project FrontEnd.RazorCoreGenerate.cache
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\App.razor.g.cs
-C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
@@ -1300,3 +1298,23 @@ C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\StoreCreateForm.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Shared\InputextStoreName.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\InputextStoreName.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Shared\CardsCounters.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\CardsCounters.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Shared\StoreProfile.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\StoreProfile.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\StoreProfilePage.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\StoreProfilePage.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\Customers.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\Customers.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\Catalogs.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\StoreRules.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\Catalogs.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\StoreRules.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\Inventory.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\Orders.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\Procurement.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\Inventory.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\Orders.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\Procurement.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Pages\Reports.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\Reports.razor.g.cs
