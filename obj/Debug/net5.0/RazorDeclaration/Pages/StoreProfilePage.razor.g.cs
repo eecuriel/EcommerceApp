@@ -20,13 +20,6 @@ using System.Net.Http;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
-using System.Net.Http.Json;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 3 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
@@ -90,13 +83,6 @@ using AdminPortal.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
-using System.Threading;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 13 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\_Imports.razor"
 using Blazored.LocalStorage;
 
@@ -110,6 +96,34 @@ using Blazorise;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreProfilePage.razor"
+using System.Net.Http.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreProfilePage.razor"
+using System.Text.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreProfilePage.razor"
+using System.Threading;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreProfilePage.razor"
+using AdminPortal.Services;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/StoreProfilePage")]
     public partial class StoreProfilePage : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -118,6 +132,50 @@ using Blazorise;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 25 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Pages\StoreProfilePage.razor"
+      
+
+    private Store store = new Store();
+    string errorMesssage ="";
+    int loadingbit = 0;
+    string navEvaluation ="";
+    
+        protected override async Task OnInitializedAsync()
+        {
+            store.StoreLastModifiedDate = DateTime.UtcNow;
+            store = await storeDataService.getStoreData();
+            await localStorage.SetItemAsync("storeShortName", store.StoreShortName); 
+            
+        }
+        private async Task PutEditStore()
+        {
+            var ownerId = await localStorage.GetItemAsStringAsync("Id");
+
+            var Uri =  $"api/Store/UpdateStore/{ownerId}";
+            var token  =  await sessionStorage.GetItemAsync<string>("token");
+            Http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+            var response = await Http.PutAsJsonAsync(Uri,store);
+            var result = await response.Content.ReadFromJsonAsync<ResponseState>();
+        
+                if (result.state == "Updated"){
+                    loadingbit =1;
+                    errorMesssage = $"Info : Your information has been updated!. ";
+                } else  {
+                    loadingbit =2;
+                    errorMesssage = $"Error : Invalid Login";
+                } 
+        }
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.SessionStorage.ISessionStorageService sessionStorage { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private StoreDataService storeDataService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager nav { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService localStorage { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

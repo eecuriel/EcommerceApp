@@ -20,7 +20,7 @@ namespace AdminPortal.Models
         public string StoreAddress1 { get; set; }
         public string StoreAddress2 { get; set; }
         public string StorePhone { get; set; }
-        public string StroreContactEmail { get; set; }
+        public string StoreContactEmail { get; set; }
         public string StorePostalCode { get; set; }
         public string StoreLongitude { get; set; }
         public string StoreLatitude { get; set; }

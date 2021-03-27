@@ -1,0 +1,54 @@
+@using System.Threading;
+
+@if (Count ==0){
+<FaderCount>
+    <Alerts  Htmlstring=@Messasge  AlertType ="info" />
+</FaderCount>
+}else {
+<Modal @ref="modalRef" >
+    <ModalContent IsCentered="true">
+        <ModalBody>
+            <div class="text-center">
+            <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden"></span>
+            </div>
+            </div>
+        </ModalBody>
+    </ModalContent>
+</Modal>
+}
+
+@code{
+    
+    [Parameter] public string Messasge {get;set;}
+    private int Count { get; set; } = 5;
+    private Modal modalRef;
+
+    protected override void OnInitialized()
+        {
+        StartCountdown();
+        }
+
+    void StartCountdown()
+    {
+        var timer = new Timer(new TimerCallback(_ =>
+        {
+            if (Count > 0)
+            {
+                Count--;
+                InvokeAsync(() => {StateHasChanged();});
+                ShowModal();
+            }else {HideModal();}
+        }), null, 1000, 1000);
+    }
+
+    private void ShowModal()
+    {
+        modalRef.Show();
+    }
+
+    private void HideModal()
+    {
+        modalRef.Hide();
+    }
+}

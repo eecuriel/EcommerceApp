@@ -176,9 +176,6 @@ using AdminPortal.Services;
                 //await localStore.SetItemAsync("token", token);
                 await sessionStorage.SetItemAsync("token", token);
                 await localStore.SetItemAsync("Id", Id);
-
-
-
                 navEvaluation = await storeDataService.StoreValidationByUser();
                 
                 if (navEvaluation == "1"){

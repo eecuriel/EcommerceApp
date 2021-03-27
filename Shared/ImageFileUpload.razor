@@ -1,0 +1,82 @@
+@using System.ComponentModel.DataAnnotations
+@using System.IO
+@using System.Linq
+@using System.Threading
+@using AdminPortal.Services
+@inject StoreDataService storeDataService
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@implements IDisposable
+
+
+
+<h3>File Upload Component</h3>
+
+<EditForm EditContext="editContext" OnValidSubmit="OnSubmit">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        Picture: <InputFile OnChange="OnChange" class="form-control" />
+        <ValidationMessage For="() => store.StoreLogoImage" />
+
+        @{
+            var progressCss = "progress " + (displayProgress ? "" : "d-none");
+            var progressWidthStyle = progressPercent + "%";
+        }
+        <div class="@progressCss">
+            <div class="progress-bar" role="progressbar" style="width:@progressWidthStyle" area-valuenow="@progressPercent" aria-minvalue="0" aria-maxvalue="100"></div>
+        </div>
+    </div>
+    <button class="btn btn-primary">Change Picture</button>
+    @result.state
+</EditForm>
+
+@code
+{
+    private CancellationTokenSource cancelation;
+    private bool displayProgress;
+    private EditContext editContext;
+    private StoreLogo store;
+    private ResponseState result = new ResponseState();
+    private int progressPercent;
+    protected override void OnInitialized()
+    {
+        cancelation = new CancellationTokenSource();
+        store = new StoreLogo();
+        editContext = new EditContext(store);
+    }
+    private async Task OnChange(InputFileChangeEventArgs eventArgs)
+    {
+        store.StoreLogoImage = eventArgs.File;
+        store.StoreLastModifiedDate = DateTime.UtcNow;
+        store.StoreShortName =  await localStorage.GetItemAsStringAsync("storeShortName");
+        editContext.NotifyFieldChanged(FieldIdentifier.Create(() => store.StoreLogoImage));
+    }
+
+    private async Task OnSubmit()
+    {
+        using var file = File.OpenWrite(Path.Combine(Path.GetTempPath(), Path.GetRandomFileName()));
+        using var stream = store.StoreLogoImage.OpenReadStream();
+        var buffer = new byte[4 * 1096];
+        int bytesRead;
+        double totalRead = 0;
+        displayProgress = true;
+
+        while ((bytesRead = await stream.ReadAsync(buffer, cancelation.Token)) != 0)
+        {
+            totalRead += bytesRead;
+            await file.WriteAsync(buffer, cancelation.Token);
+            progressPercent = (int)((totalRead / store.StoreLogoImage.Size) * 100);
+            StateHasChanged();
+        }
+        
+        displayProgress = false;
+        
+        result = await storeDataService.putStoreLogo(store);
+        
+    }
+
+    public void Dispose()
+    {
+        cancelation.Cancel();
+    }
+
+}

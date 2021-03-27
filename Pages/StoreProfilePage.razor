@@ -1,4 +1,58 @@
 @page "/StoreProfilePage"
+@inject HttpClient Http
+@using System.Net.Http.Json;
+@using System.Text.Json
+@using System.Threading
+@using AdminPortal.Services
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject NavigationManager nav
+@inject StoreDataService storeDataService
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
-<StoreProfile/>
 
+
+@if (loadingbit == 2) {
+    <FaderCount>
+        <Alerts  Htmlstring=@errorMesssage  AlertType ="danger" />
+    </FaderCount>
+}else if (loadingbit == 1){
+    <ShowLoadingModal Messasge="@errorMesssage"/>
+    
+}
+
+<StoreProfile OnValidSubmit="PutEditStore" store="store"  />
+
+@code{
+
+    private Store store = new Store();
+    string errorMesssage ="";
+    int loadingbit = 0;
+    string navEvaluation ="";
+    
+        protected override async Task OnInitializedAsync()
+        {
+            store.StoreLastModifiedDate = DateTime.UtcNow;
+            store = await storeDataService.getStoreData();
+            await localStorage.SetItemAsync("storeShortName", store.StoreShortName); 
+            
+        }
+        private async Task PutEditStore()
+        {
+            var ownerId = await localStorage.GetItemAsStringAsync("Id");
+
+            var Uri =  $"api/Store/UpdateStore/{ownerId}";
+            var token  =  await sessionStorage.GetItemAsync<string>("token");
+            Http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+            var response = await Http.PutAsJsonAsync(Uri,store);
+            var result = await response.Content.ReadFromJsonAsync<ResponseState>();
+        
+                if (result.state == "Updated"){
+                    loadingbit =1;
+                    errorMesssage = $"Info : Your information has been updated!. ";
+                } else  {
+                    loadingbit =2;
+                    errorMesssage = $"Error : Invalid Login";
+                } 
+        }
+
+}

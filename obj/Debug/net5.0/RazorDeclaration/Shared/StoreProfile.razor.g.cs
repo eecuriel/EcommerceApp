@@ -125,24 +125,30 @@ using AdminPortal.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 156 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\StoreProfile.razor"
+#line 169 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\StoreProfile.razor"
                
 
-            private Store store =  new Store();
+            [Parameter] public  Store store {get;set;}
+            [Parameter] public EventCallback OnValidSubmit { get; set; }
             string storeURL = "";
 
 
-            protected override async Task OnInitializedAsync()
-            {
-                  store = await storeDataService.getStoreData();
-                  storeURL = $"{nav.BaseUri}/{store.StoreShortName}";
-            }
 
+              protected override async Task OnInitializedAsync(){
+
+                var shortName = await localStorage.GetItemAsStringAsync("storeShortName");
+                storeURL = $"{nav.BaseUri}{shortName}";
+
+                
+
+              }
+        
         
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService localStorage { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager nav { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private StoreDataService storeDataService { get; set; }
     }

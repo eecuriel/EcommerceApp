@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "v4SsNzQGdJOWkkdDCuhBgIlLQGsMdkc8bly8Zf6Ps7TvkYKggKA91M750e6XJECnI/e0UzoNlQSTPztE0xOGEA==",
+  "dgSpecHash": "Zds5M2GYhXfJusfHe7v7nUhPpCSKgVZOHIeNstAoAyibSI6lbPVVhUo9IUhiihJlmgfYvAn4WNzI67QN5jszmA==",
   "success": true,
   "projectFilePath": "C:\\Users\\eduar\\Documents\\Proyectos 2021\\04 Haddie\\03 Realization\\AdminPortal\\Project FrontEnd.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,10 @@
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.components.web\\5.0.3\\microsoft.aspnetcore.components.web.5.0.3.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\5.0.3\\microsoft.aspnetcore.components.webassembly.5.0.3.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\5.0.3\\microsoft.aspnetcore.components.webassembly.devserver.5.0.3.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.aspnetcore.metadata\\5.0.3\\microsoft.aspnetcore.metadata.5.0.3.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
@@ -32,8 +36,11 @@
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.jsinterop\\5.0.3\\microsoft.jsinterop.5.0.3.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.3\\microsoft.jsinterop.webassembly.5.0.3.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.4\\microsoft.netcore.app.runtime.browser-wasm.5.0.4.nupkg.sha512"
   ],
   "logs": []

@@ -135,14 +135,8 @@ using System.Threading;
             if (Count > 0)
             {
                 Count--;
-
-                // Note that the following line is necessary because otherwise
-                // Blazor would not recognize the state change and not refresh the UI
                 InvokeAsync(() =>
-                {
-
-                    StateHasChanged();
-                });
+                {StateHasChanged();});
             }
         }), null, 1000, 1000);
     }

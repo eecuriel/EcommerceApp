@@ -120,8 +120,17 @@ namespace AdminPortal.Services
             if (UserId == ownerId){
                 storeName = result.StoreName;
             } 
-
             return result;
+    } 
+
+    public async Task<ResponseState> putStoreLogo(StoreLogo storeLogoData) {
+
+        var ownerId = await localStorage.GetItemAsStringAsync("Id");
+        var Uri =  $"api/Store/UpdateStore/StorePic/{ownerId}";
+        var response = await http.PutAsJsonAsync(Uri,storeLogoData);
+        var result = await response.Content.ReadFromJsonAsync<ResponseState>();
+
+        return result;
     } 
 
     }
