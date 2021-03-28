@@ -1,4 +1,5 @@
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading;
@@ -18,14 +19,15 @@ namespace AdminPortal.Services
         private HttpClient http {get; set;}
         private ILocalStorageService localStorage { get; set; }
         private ISessionStorageService  sessionStorage {get;set;}
-        
+
         public StoreDataService(ILocalStorageService _localStorage,HttpClient _http,ISessionStorageService  _sessionStorage)
         {
             localStorage = _localStorage;
             http =_http;
             sessionStorage = _sessionStorage;
+            
         }
-        
+    
     public async ValueTask<string[]>  StoreValidationByShortName(string value) 
     {
         
@@ -70,15 +72,13 @@ namespace AdminPortal.Services
 
     public async ValueTask<string> StoreValidationByUser() {
 
-        var ownerId = await localStorage.GetItemAsStringAsync("Id");
-        string navEvaluation ="";
-
-        var Uri =  $"api/Store/Stores/UserId/{ownerId}";
-        //End point unique authorization
-        //var token = await localStorage.GetItemAsStringAsync("token");
+        if (http.DefaultRequestHeaders.Authorization == null) {
         var token  =  await sessionStorage.GetItemAsync<string>("token");
         http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-        //End point unique authorization
+        }
+        var ownerId = await localStorage.GetItemAsStringAsync("Id");
+        string navEvaluation ="";
+        var Uri =  $"api/Store/Stores/UserId/{ownerId}";
         var response = await http.GetAsync(Uri);
         var result = await response.Content.ReadFromJsonAsync<Store>();
             var UserId = result.UserId;
@@ -93,6 +93,11 @@ namespace AdminPortal.Services
 
     public async ValueTask<string> getStoreName() {
 
+        if (http.DefaultRequestHeaders.Authorization == null) {
+        var token  =  await sessionStorage.GetItemAsync<string>("token");
+        http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+        }   
+
         var ownerId = await localStorage.GetItemAsStringAsync("Id");
         string storeName ="";
 
@@ -103,16 +108,18 @@ namespace AdminPortal.Services
             if (UserId == ownerId){
                 storeName = result.StoreName;
             } 
-
             return storeName;
     } 
 
-    
     public async Task<Store> getStoreData() {
 
+        if (http.DefaultRequestHeaders.Authorization == null) {
+        var token  =  await sessionStorage.GetItemAsync<string>("token");
+        http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+        }
+        
         var ownerId = await localStorage.GetItemAsStringAsync("Id");
         string storeName ="";
-
         var Uri =  $"api/Store/Stores/UserId/{ownerId}";
         var response = await http.GetAsync(Uri);
         var result = await response.Content.ReadFromJsonAsync<Store>();
@@ -123,11 +130,15 @@ namespace AdminPortal.Services
             return result;
     } 
 
-    public async Task<ResponseState> putStoreLogo(StoreLogo storeLogoData) {
+    public async Task<ResponseState> putStoreLogo(MultipartFormDataContent storeLogoData) {
 
+        if (http.DefaultRequestHeaders.Authorization == null) {
+        var token  =  await sessionStorage.GetItemAsync<string>("token");
+        http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+        }        
         var ownerId = await localStorage.GetItemAsStringAsync("Id");
         var Uri =  $"api/Store/UpdateStore/StorePic/{ownerId}";
-        var response = await http.PutAsJsonAsync(Uri,storeLogoData);
+        var response = await http.PutAsync(Uri,storeLogoData);
         var result = await response.Content.ReadFromJsonAsync<ResponseState>();
 
         return result;

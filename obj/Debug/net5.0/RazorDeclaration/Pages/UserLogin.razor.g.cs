@@ -166,6 +166,7 @@ using AdminPortal.Services;
         Http.DefaultRequestHeaders.Remove("Authorization");
         //remove Authorization
         var Uri =  "api/UserAccount/Login";
+        
         var response = await Http.PostAsJsonAsync(Uri,newLoging);
         var result = await response.Content.ReadFromJsonAsync<UserToken>();
         Thread.Sleep(10000);

@@ -97,7 +97,11 @@
             StoreStatus = "Pending",
             UserId =  ownerId
         };
-        Console.WriteLine($"Store : {newStore.StoreShortName}");
+        
+        if (Http.DefaultRequestHeaders.Authorization == null) {
+        var token  =  await sessionStorage.GetItemAsync<string>("token");
+        Http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+        } 
         var Uri =  "api/Store/CreateStore";
         var response = await Http.PostAsJsonAsync(Uri,newStore);
         var result = await response.Content.ReadFromJsonAsync<ResponseState>();

@@ -1,77 +1,96 @@
-@using System.ComponentModel.DataAnnotations
-@using System.IO
-@using System.Linq
 @using System.Threading
 @using AdminPortal.Services
 @inject StoreDataService storeDataService
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
 @implements IDisposable
+@inject HttpClient http
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 
 
-<h3>File Upload Component</h3>
+
+<h3>Select your store logo</h3>
 
 <EditForm EditContext="editContext" OnValidSubmit="OnSubmit">
     <DataAnnotationsValidator />
     <div class="form-group">
         Picture: <InputFile OnChange="OnChange" class="form-control" />
-        <ValidationMessage For="() => store.StoreLogoImage" />
-
-        @{
-            var progressCss = "progress " + (displayProgress ? "" : "d-none");
-            var progressWidthStyle = progressPercent + "%";
+        <!--<ValidationMessage For="() => store.StoreLogoImage" />-->
+        @if (Status =="Updated") {
+            <FaderCount>
+            <LoadingModal/>
+            <label>Updating</label>
+            </FaderCount>
         }
-        <div class="@progressCss">
-            <div class="progress-bar" role="progressbar" style="width:@progressWidthStyle" area-valuenow="@progressPercent" aria-minvalue="0" aria-maxvalue="100"></div>
-        </div>
     </div>
     <button class="btn btn-primary">Change Picture</button>
-    @result.state
+
 </EditForm>
 
 @code
 {
+    private string Status = "";
     private CancellationTokenSource cancelation;
-    private bool displayProgress;
     private EditContext editContext;
     private StoreLogo store;
     private ResponseState result = new ResponseState();
-    private int progressPercent;
+    public IBrowserFile File = null;
+    private MultipartFormDataContent content = new MultipartFormDataContent();
+    StreamContent fileContent = null;
     protected override void OnInitialized()
     {
         cancelation = new CancellationTokenSource();
         store = new StoreLogo();
         editContext = new EditContext(store);
     }
-    private async Task OnChange(InputFileChangeEventArgs eventArgs)
+    private async Task OnChange(InputFileChangeEventArgs e)
     {
-        store.StoreLogoImage = eventArgs.File;
-        store.StoreLastModifiedDate = DateTime.UtcNow;
-        store.StoreShortName =  await localStorage.GetItemAsStringAsync("storeShortName");
-        editContext.NotifyFieldChanged(FieldIdentifier.Create(() => store.StoreLogoImage));
+
+    var maxAllowedFiles = 1;
+        
+        File = e.File;
+        foreach (var imageFile in e.GetMultipleFiles(maxAllowedFiles))
+        {
+                if (imageFile.ContentType == "image/png" || imageFile.ContentType == "image/jpeg" || imageFile.ContentType == "image/gif" ) 
+                    {
+                        store.StoreLogoImage = imageFile;
+                        store.StoreShortName =  await localStorage.GetItemAsStringAsync("storeShortName");
+                        
+                        content = new MultipartFormDataContent();
+                        content.Add(new StringContent(store.StoreShortName), "StoreShortName");
+                        var fileContent = new StreamContent(store.StoreLogoImage.OpenReadStream());
+                        fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(store.StoreLogoImage.ContentType);
+                        fileContent.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("form-data")
+                        {
+                        Name = "StoreLogoImage",
+                        FileName = imageFile.Name
+                        };
+                        content.Add(fileContent);
+
+                        //Debug values
+                        Console.WriteLine($"File :{imageFile.Name}");
+                        Console.WriteLine($"Contenido :{store.StoreLogoImage.ContentType}");
+                        Console.WriteLine($"Tamaño :{store.StoreLogoImage.Size}");
+
+                    }      
+        }
+        
     }
 
     private async Task OnSubmit()
     {
-        using var file = File.OpenWrite(Path.Combine(Path.GetTempPath(), Path.GetRandomFileName()));
-        using var stream = store.StoreLogoImage.OpenReadStream();
-        var buffer = new byte[4 * 1096];
-        int bytesRead;
-        double totalRead = 0;
-        displayProgress = true;
+    
+        var result = await storeDataService.putStoreLogo(content);
 
-        while ((bytesRead = await stream.ReadAsync(buffer, cancelation.Token)) != 0)
-        {
-            totalRead += bytesRead;
-            await file.WriteAsync(buffer, cancelation.Token);
-            progressPercent = (int)((totalRead / store.StoreLogoImage.Size) * 100);
-            StateHasChanged();
+        if (result.state == "Updated") {
+
+            Status = "Updated";
+
+        }else {
+            Status = "Failed";
         }
-        
-        displayProgress = false;
-        
-        result = await storeDataService.putStoreLogo(store);
-        
+        //Debug Value
+        Console.WriteLine($"Resultado :{result}");
     }
 
     public void Dispose()

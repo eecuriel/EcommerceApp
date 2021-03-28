@@ -9,6 +9,7 @@ namespace Project_FrontEnd.Shared
     #line hidden
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
@@ -104,34 +105,13 @@ using Blazorise;
 #nullable disable
 #nullable restore
 #line 1 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\ImageFileUpload.razor"
-using System.ComponentModel.DataAnnotations;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 2 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\ImageFileUpload.razor"
-using System.IO;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\ImageFileUpload.razor"
-using System.Linq;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 4 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\ImageFileUpload.razor"
 using System.Threading;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\ImageFileUpload.razor"
+#line 2 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\ImageFileUpload.razor"
 using AdminPortal.Services;
 
 #line default
@@ -145,49 +125,70 @@ using AdminPortal.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\ImageFileUpload.razor"
+#line 31 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\ImageFileUpload.razor"
  
+    private string Status = "";
     private CancellationTokenSource cancelation;
-    private bool displayProgress;
     private EditContext editContext;
     private StoreLogo store;
     private ResponseState result = new ResponseState();
-    private int progressPercent;
+    public IBrowserFile File = null;
+    private MultipartFormDataContent content = new MultipartFormDataContent();
+    StreamContent fileContent = null;
     protected override void OnInitialized()
     {
         cancelation = new CancellationTokenSource();
         store = new StoreLogo();
         editContext = new EditContext(store);
     }
-    private async Task OnChange(InputFileChangeEventArgs eventArgs)
+    private async Task OnChange(InputFileChangeEventArgs e)
     {
-        store.StoreLogoImage = eventArgs.File;
-        store.StoreLastModifiedDate = DateTime.UtcNow;
-        store.StoreShortName =  await localStorage.GetItemAsStringAsync("storeShortName");
-        editContext.NotifyFieldChanged(FieldIdentifier.Create(() => store.StoreLogoImage));
+
+    var maxAllowedFiles = 1;
+        
+        File = e.File;
+        foreach (var imageFile in e.GetMultipleFiles(maxAllowedFiles))
+        {
+                if (imageFile.ContentType == "image/png" || imageFile.ContentType == "image/jpeg" || imageFile.ContentType == "image/gif" ) 
+                    {
+                        store.StoreLogoImage = imageFile;
+                        store.StoreShortName =  await localStorage.GetItemAsStringAsync("storeShortName");
+                        
+                        content = new MultipartFormDataContent();
+                        content.Add(new StringContent(store.StoreShortName), "StoreShortName");
+                        var fileContent = new StreamContent(store.StoreLogoImage.OpenReadStream());
+                        fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(store.StoreLogoImage.ContentType);
+                        fileContent.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("form-data")
+                        {
+                        Name = "StoreLogoImage",
+                        FileName = imageFile.Name
+                        };
+                        content.Add(fileContent);
+
+                        //Debug values
+                        Console.WriteLine($"File :{imageFile.Name}");
+                        Console.WriteLine($"Contenido :{store.StoreLogoImage.ContentType}");
+                        Console.WriteLine($"Tamaño :{store.StoreLogoImage.Size}");
+
+                    }      
+        }
+        
     }
 
     private async Task OnSubmit()
     {
-        using var file = File.OpenWrite(Path.Combine(Path.GetTempPath(), Path.GetRandomFileName()));
-        using var stream = store.StoreLogoImage.OpenReadStream();
-        var buffer = new byte[4 * 1096];
-        int bytesRead;
-        double totalRead = 0;
-        displayProgress = true;
+    
+        var result = await storeDataService.putStoreLogo(content);
 
-        while ((bytesRead = await stream.ReadAsync(buffer, cancelation.Token)) != 0)
-        {
-            totalRead += bytesRead;
-            await file.WriteAsync(buffer, cancelation.Token);
-            progressPercent = (int)((totalRead / store.StoreLogoImage.Size) * 100);
-            StateHasChanged();
+        if (result.state == "Updated") {
+
+            Status = "Updated";
+
+        }else {
+            Status = "Failed";
         }
-        
-        displayProgress = false;
-        
-        result = await storeDataService.putStoreLogo(store);
-        
+        //Debug Value
+        Console.WriteLine($"Resultado :{result}");
     }
 
     public void Dispose()
@@ -199,6 +200,8 @@ using AdminPortal.Services;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.SessionStorage.ISessionStorageService sessionStorage { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient http { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService localStorage { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private StoreDataService storeDataService { get; set; }
     }

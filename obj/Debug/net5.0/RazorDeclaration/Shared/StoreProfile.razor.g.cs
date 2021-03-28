@@ -131,7 +131,7 @@ using AdminPortal.Services;
             [Parameter] public  Store store {get;set;}
             [Parameter] public EventCallback OnValidSubmit { get; set; }
             string storeURL = "";
-
+            
 
 
               protected override async Task OnInitializedAsync(){

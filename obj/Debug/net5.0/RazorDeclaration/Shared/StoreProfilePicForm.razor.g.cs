@@ -110,13 +110,6 @@ using Blazorise;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 1 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\StoreProfilePicForm.razor"
-using System.IO;
-
-#line default
-#line hidden
-#nullable disable
     public partial class StoreProfilePicForm : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -125,7 +118,7 @@ using System.IO;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\StoreProfilePicForm.razor"
+#line 23 "C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\Shared\StoreProfilePicForm.razor"
       
     private Modal modalRef;
     string fileContent;
@@ -137,13 +130,15 @@ using System.IO;
     }
     private void HideModal()
     {
-        modalRef.Hide();
+            nav.NavigateTo("/StoreProfilePage");
+            modalRef.Hide();
     }
 
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager nav { get; set; }
     }
 }
 #pragma warning restore 1591

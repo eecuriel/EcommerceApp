@@ -11,9 +11,10 @@ namespace AdminPortal.Models
        // [StringLength(20, MinimumLength = 2)]
         public string StoreShortName { get; set; }
 
-        [Required]
-        [FileValidation(new[] { ".png", ".jpg" })]
+        //[Required]
+        //[FileValidation(new[] { ".png", ".jpeg",".gif" })]
         public IBrowserFile StoreLogoImage { get; set; }
-        public DateTime StoreLastModifiedDate { get; set; }
+        //public string StoreLogoImage { get; set; }
+
     }
 }

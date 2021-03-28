@@ -148,13 +148,21 @@ using AdminPortal.Services;
             await localStorage.SetItemAsync("storeShortName", store.StoreShortName); 
             
         }
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            store = await storeDataService.getStoreData();
+        }
+        
         private async Task PutEditStore()
         {
-            var ownerId = await localStorage.GetItemAsStringAsync("Id");
+            if (Http.DefaultRequestHeaders.Authorization == null) {
+                var token  =  await sessionStorage.GetItemAsync<string>("token");
+                Http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+            } 
 
+            var ownerId = await localStorage.GetItemAsStringAsync("Id");
             var Uri =  $"api/Store/UpdateStore/{ownerId}";
-            var token  =  await sessionStorage.GetItemAsync<string>("token");
-            Http.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
             var response = await Http.PutAsJsonAsync(Uri,store);
             var result = await response.Content.ReadFromJsonAsync<ResponseState>();
         
