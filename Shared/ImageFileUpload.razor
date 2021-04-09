@@ -5,9 +5,7 @@
 @implements IDisposable
 @inject HttpClient http
 @inject Blazored.SessionStorage.ISessionStorageService sessionStorage
-
-
-
+@inject NavigationManager nav
 
 <h3>Select your store logo</h3>
 
@@ -36,7 +34,6 @@
     private ResponseState result = new ResponseState();
     public IBrowserFile File = null;
     private MultipartFormDataContent content = new MultipartFormDataContent();
-    StreamContent fileContent = null;
     protected override void OnInitialized()
     {
         cancelation = new CancellationTokenSource();
@@ -71,7 +68,6 @@
                         Console.WriteLine($"File :{imageFile.Name}");
                         Console.WriteLine($"Contenido :{store.StoreLogoImage.ContentType}");
                         Console.WriteLine($"Tamaño :{store.StoreLogoImage.Size}");
-
                     }      
         }
         
@@ -85,6 +81,7 @@
         if (result.state == "Updated") {
 
             Status = "Updated";
+            nav.NavigateTo("/StoreProfilePage");
 
         }else {
             Status = "Failed";
@@ -92,7 +89,6 @@
         //Debug Value
         Console.WriteLine($"Resultado :{result}");
     }
-
     public void Dispose()
     {
         cancelation.Cancel();

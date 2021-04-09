@@ -1,4 +1,4 @@
-@inject NavigationManager nav
+
 
 <div class="btn btn-primary">
     <a  @onclick="@ShowModal"><i class="fas fa-camera"></i> Change Store logo</a>
@@ -15,23 +15,22 @@
             <!--<FileInputBlazorise/>-->
         </ModalBody>
         <ModalFooter>
-            <Button Color="Color.Secondary" Clicked="@HideModal">Close</Button>
+            <Button Color="Color.Secondary" Clicked="loadPage">Close</Button>
+        
         </ModalFooter>
     </ModalContent>
 </Modal>
 
 @code{
-    private Modal modalRef;
-    string fileContent;
-    int OneMb =1;
 
+    [Parameter] public EventCallback loadPage {get;set;}
+    private Modal modalRef;
     private void ShowModal()
     {
         modalRef.Show();
     }
     private void HideModal()
     {
-            nav.NavigateTo("/StoreProfilePage");
             modalRef.Hide();
     }
 

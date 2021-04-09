@@ -1,0 +1,142 @@
+
+
+
+<!-- Begin Page Content -->
+        <div class="container-fluid">
+        <div  class="float-start">
+            <h3 class="m-0 font-weight-bold text-primary text-end">@CrudName</h3>
+        </div>
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+            <div class="float-end">
+                <Button class="btn btn-success btn-icon-split" Clicked="@NewItemShowModal" >
+                    <span class="icon text-white-50">
+                    <i class="fas fa-plus"></i>
+                    </span>
+                    <span class="text">New @CrudName</span>
+                </Button>
+            </div>
+            
+            </div>
+            <div class="card-body">
+            <Table Hoverable="true">
+                <TableHeader>
+                    <TableRow>
+                        <TableHeaderCell>Col1</TableHeaderCell>
+                        <TableHeaderCell>Col2</TableHeaderCell>
+                        <TableHeaderCell>Col3</TableHeaderCell>
+                        <TableHeaderCell>Col4</TableHeaderCell>
+                        <TableHeaderCell>Edit</TableHeaderCell>
+                        <TableHeaderCell>Delete</TableHeaderCell>
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
+                    @for (var i=0; i < RowNumber;i++)
+                    {   
+                    <TableRow>
+                        <TableRowHeader>@i</TableRowHeader>
+                        <TableRowCell>Mark</TableRowCell>
+                        <TableRowCell>Otto</TableRowCell>
+                        <TableRowCell>mdo</TableRowCell>
+                        <TableRowCell><Button Clicked="@EdittemShowModal"><span class="oi oi-spreadsheet"></span></Button></TableRowCell>
+                        <TableRowCell><Button Clicked="@DeleteAlertShowModal" ><span class="oi oi-trash"></span></Button></TableRowCell>
+                    </TableRow>
+                    }
+                </TableBody>
+            </Table>
+            </div>
+        </div>
+
+        </div>
+        <!-- /.container-fluid -->
+        <!--New Item Modal -->
+        <Modal @ref="NewItemModal">
+        <ModalContent IsCentered="true">
+            <ModalHeader>
+                <ModalTitle>New @CrudName</ModalTitle>
+                <CloseButton />
+            </ModalHeader>
+            <ModalBody>
+                <ItemCategoryForm/>
+            </ModalBody>
+            <ModalFooter>
+                <Button Color="Color.Secondary" Clicked="@NewItemHideModal">Close</Button>
+                <Button Color="Color.Primary" Clicked="@NewItemHideModal">Save Changes</Button>
+            </ModalFooter>
+            </ModalContent>
+        </Modal>
+    <!--New Item Modal end -->
+
+    <!--Edit Item Modal -->
+        <Modal @ref="EdititemModal">
+        <ModalContent IsCentered="true">
+            <ModalHeader>
+                <ModalTitle>Edit @CrudName</ModalTitle>
+                <CloseButton />
+            </ModalHeader>
+            <ModalBody>
+                <ItemCategoryForm/>
+            </ModalBody>
+            <ModalFooter>
+                <Button Color="Color.Secondary" Clicked="@EditItemHideModal">Close</Button>
+                <Button Color="Color.Primary" Clicked="@EditItemHideModal">Save Changes</Button>
+            </ModalFooter>
+            </ModalContent>
+        </Modal>
+    <!--Edit Item Modal end -->
+
+    
+    <!--Delete Alert Modal -->
+        <Modal @ref="DeleteAlertModal">
+        <ModalContent IsCentered="true">
+            <ModalBody>
+                Are you sure to delete this item?
+            </ModalBody>
+            <ModalFooter>
+                <Button Color="Color.Primary" Clicked="@DeleteAlertHideModal">Yes</Button>
+                <Button Color="Color.Secondary" Clicked="@DeleteAlertHideModal">No</Button>
+            </ModalFooter>
+            </ModalContent>
+        </Modal>
+    <!--Delete Alert Modal end -->
+
+@code {
+    [Parameter] public string CrudName {get; set;}
+    private int RowNumber = 5;
+       // reference to the modal component
+    private Modal NewItemModal;
+    private Modal EdititemModal;
+
+    private Modal DeleteAlertModal;
+    private void NewItemShowModal()
+    {
+        NewItemModal.Show();
+    }
+
+    private void NewItemHideModal()
+    {
+        NewItemModal.Hide();
+    }
+
+    private void EdittemShowModal()
+    {
+        EdititemModal.Show();
+    }
+
+    private void EditItemHideModal()
+    {
+        EdititemModal.Hide();
+    }
+
+    private void DeleteAlertShowModal()
+    {
+        DeleteAlertModal.Show();
+    }
+
+    private void DeleteAlertHideModal()
+    {
+        DeleteAlertModal.Hide();
+    }
+
+}

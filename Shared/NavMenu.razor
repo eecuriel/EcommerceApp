@@ -64,9 +64,11 @@
                     <span class="oi oi-grid-three-up" aria-hidden="true"></span> Master Data
                 </DropdownToggle>
                 <DropdownMenu>
-                    <DropdownItem ><label class="text-primary">Order Type</label></DropdownItem>
+                    <DropdownItem >
+                        <label class="text-primary">Order Type</label>
+                    </DropdownItem>
                     <DropdownDivider />
-                    <DropdownItem ><label class="text-primary">Items types</label></DropdownItem>
+                    <DropdownItem ><label class="text-primary">Currencies</label></DropdownItem>
                     <DropdownDivider />
                     <DropdownItem ><label class="text-primary">Sales Categories</label></DropdownItem>
                     <DropdownDivider />
@@ -75,7 +77,27 @@
                     <DropdownItem ><label class="text-primary">Status types</label></DropdownItem>
                 </DropdownMenu>
             </Dropdown>
-            
+
+            </li>
+                <li class="nav-item px-3">
+                <Dropdown>
+                <DropdownToggle Color="Color.Primary">
+                    <span class="oi oi-tag" aria-hidden="true"></span> Items
+                </DropdownToggle>
+                <DropdownMenu>
+                    <DropdownItem >
+                    <a class="nav-link text-primary" href="/ItemTypePage">Item Type</a>
+                    </DropdownItem>
+                    <DropdownDivider />
+                    <DropdownItem >
+                    <a class="nav-link text-primary" href="/ItemCategoryPage">Item Category</a>
+                    </DropdownItem>
+                    <DropdownDivider />
+                    <DropdownItem >
+                    <a class="nav-link text-primary" href="/ItemsPage">Add Item</a>
+                    </DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
             </li>
 
 

@@ -1,8 +1,6 @@
 @page "/StoreProfilePage"
 @inject HttpClient Http
 @using System.Net.Http.Json;
-@using System.Text.Json
-@using System.Threading
 @using AdminPortal.Services
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
 @inject NavigationManager nav
@@ -27,7 +25,6 @@
     private Store store = new Store();
     string errorMesssage ="";
     int loadingbit = 0;
-    string navEvaluation ="";
     
         protected override async Task OnInitializedAsync()
         {
@@ -37,10 +34,6 @@
             
         }
 
-        protected override async Task OnAfterRenderAsync(bool firstRender)
-        {
-            store = await storeDataService.getStoreData();
-        }
         
         private async Task PutEditStore()
         {

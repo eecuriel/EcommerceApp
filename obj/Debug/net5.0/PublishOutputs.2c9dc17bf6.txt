@@ -102,6 +102,7 @@ C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular
 C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular.ttf
 C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular.woff
 C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular.woff2
+C:\inetpub\EcommerceApp\wwwroot\images\blank-profile-picture-png.png
 C:\inetpub\EcommerceApp\wwwroot\images\commit.png
 C:\inetpub\EcommerceApp\wwwroot\images\signin-image.jpg
 C:\inetpub\EcommerceApp\wwwroot\images\signup-image.jpg
@@ -165,7 +166,6 @@ C:\inetpub\EcommerceApp\wwwroot\_framework\System.ComponentModel.TypeConverter.d
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.ComponentModel.dll
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Console.dll
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Drawing.Primitives.dll
-C:\inetpub\EcommerceApp\wwwroot\_framework\System.IO.FileSystem.dll
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Linq.Expressions.dll
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Linq.dll
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Memory.dll
@@ -289,6 +289,7 @@ C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular
 C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular.ttf.br
 C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular.woff.br
 C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular.woff2.br
+C:\inetpub\EcommerceApp\wwwroot\images\blank-profile-picture-png.png.br
 C:\inetpub\EcommerceApp\wwwroot\images\commit.png.br
 C:\inetpub\EcommerceApp\wwwroot\images\signin-image.jpg.br
 C:\inetpub\EcommerceApp\wwwroot\images\signup-image.jpg.br
@@ -352,7 +353,6 @@ C:\inetpub\EcommerceApp\wwwroot\_framework\System.ComponentModel.TypeConverter.d
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.ComponentModel.dll.br
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Console.dll.br
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Drawing.Primitives.dll.br
-C:\inetpub\EcommerceApp\wwwroot\_framework\System.IO.FileSystem.dll.br
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Linq.Expressions.dll.br
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Linq.dll.br
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Memory.dll.br
@@ -475,6 +475,7 @@ C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular
 C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular.ttf.gz
 C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular.woff.gz
 C:\inetpub\EcommerceApp\wwwroot\fonts\poppins\roboto-condensed-v16-latin-regular.woff2.gz
+C:\inetpub\EcommerceApp\wwwroot\images\blank-profile-picture-png.png.gz
 C:\inetpub\EcommerceApp\wwwroot\images\commit.png.gz
 C:\inetpub\EcommerceApp\wwwroot\images\signin-image.jpg.gz
 C:\inetpub\EcommerceApp\wwwroot\images\signup-image.jpg.gz
@@ -538,7 +539,6 @@ C:\inetpub\EcommerceApp\wwwroot\_framework\System.ComponentModel.TypeConverter.d
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.ComponentModel.dll.gz
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Console.dll.gz
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Drawing.Primitives.dll.gz
-C:\inetpub\EcommerceApp\wwwroot\_framework\System.IO.FileSystem.dll.gz
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Linq.Expressions.dll.gz
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Linq.dll.gz
 C:\inetpub\EcommerceApp\wwwroot\_framework\System.Memory.dll.gz

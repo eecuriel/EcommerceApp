@@ -1,8 +1,5 @@
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using System.Text.Json;
-using System.Threading;
 using System.Threading.Tasks;
 using AdminPortal.Models;
 using Blazored.LocalStorage;
@@ -47,7 +44,7 @@ namespace AdminPortal.Services
             return responseArray;
 
         } else {
-
+            
             var Uri =  $"api/Store/Stores/{shortName}";
             var response = await http.GetAsync(Uri);
             var result = await response.Content.ReadFromJsonAsync<StoreValidation>();
