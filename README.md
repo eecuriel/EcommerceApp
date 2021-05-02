@@ -41,10 +41,7 @@ You can fork the repositroy or download it for your use.  If you want to collabo
 
 - .NET 5.0.104
 - MS SQL express or superior
-- Entity Framework Core .NET --version 5.0.5
-- AutoMapper --version 10.1.1
-- NetTopologySuite --version 2.2.0
-- MailKit --version 2.11.1
+- Project API installed.  You can see the instructions here [Ecommerce API](https://github.com/eecuriel/Project-API.git)
 
 
 ### Installing
