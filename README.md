@@ -1,4 +1,4 @@
-# Ecommerce application API
+# Ecommerce application
 
 This is a base version of an API to manage the business rules and master data for a Ecommerce application.  The actual state of it is  "in developing" project and the progress will be updated frecuently.
 
