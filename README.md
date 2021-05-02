@@ -64,15 +64,13 @@ Important :
 
 ![image](https://user-images.githubusercontent.com/67849830/116789284-24808080-aa7c-11eb-9e09-0c5394fec5e2.png)
 
-5- Running the API
-- You can browse your local site and explore all the endpoint that the API contain using Swagger
+4- Setting up the application
 
-![image](https://user-images.githubusercontent.com/67849830/116789596-97d6c200-aa7d-11eb-949e-7df4c358702e.png)
 
-6- Testing the End Points
-- You can use Postman v8.3.0 [Download](https://www.postman.com/downloads/)
 
-![image](https://user-images.githubusercontent.com/67849830/116789772-8e018e80-aa7e-11eb-9166-b226b5439716.png)
+
+5- Testing the application
+
 
 
 ## Authors
