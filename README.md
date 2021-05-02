@@ -40,6 +40,7 @@ You can fork the repositroy or download it for your use.  If you want to collabo
 ### Prerequisites
 
 - .NET 5.0.104
+- .NET Core Hosting Bundle
 - MS SQL express or superior
 - Project API installed.  You can see the instructions here [Ecommerce API](https://github.com/eecuriel/Project-API.git)
 
