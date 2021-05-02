@@ -1,87 +1,90 @@
-# Project Title
+# Ecommerce application API
 
-One Paragraph of project description goes here
+This is a base version of an API to manage the business rules and master data for a Ecommerce application.  The actual state of it is  "in developing" project and the progress will be updated frecuently.
+
+This project will contain the following functionalities:
+- Multiple Store creation and adminitration
+- Product Catalog
+- Shopping cart
+- Shipping fees administration
+- Rentals
+- Inventory management
+- Quotation and Order fulfillment
+- Stock procurement based in availabilty. Just for orders into the scope of "Make to Order"
+- Administration of attention times and schedule of services
+- Delivery scope administration
+
+This first version can manage:
+
+- Data base interaction. You can use Entity Framerwork migration to create all the entities needs into a MS SQL database
+- Email Service.
+- Image files upload service
+- JWT bearer token
+- Authorization and Authentication model
+- Swagger
+- UserIdentity schema
+
+End points for:
+- Store creation
+- User registration
+- User profile update
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+You can fork the repositroy or download it for your use.  If you want to collaborate with the project, write me :), I will be so happy to receip help.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+- .NET 5.0.104
+- MS SQL express or superior
+- Entity Framework Core .NET --version 5.0.5
+- AutoMapper --version 10.1.1
+- NetTopologySuite --version 2.2.0
+- MailKit --version 2.11.1
 
-```
-Give examples
-```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Impotant: Thoses steps just apply to Internet Information Service (IIS) in Windows and using a developer access. 
 
-Say what the step will be
+1- Install the .NET Core Hosting Bundle [Download here](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/hosting-bundle?view=aspnetcore-5.0)
 
+2- Publish into C:\inetpub\wwwroot\
+ You can use the publish option in VS Communty or in NET CLI
 ```
-Give the example
+dotnet publish -o C:\inetpub\wwwroot\YOURFOLDER
 ```
+3- Create a new site in IIS
 
-And repeat
+Important : 
+- The application pool must be "NetCore" that can appear once you install .Net Core Hosting Bundle
+- Is not mandatory use a SSL certificate for testing propose.  If you want to test it, if is the case, you can use the developer certificate provided by your IIS installation.
 
-```
-until finished
-```
+![image](https://user-images.githubusercontent.com/67849830/116789284-24808080-aa7c-11eb-9e09-0c5394fec5e2.png)
 
-End with an example of getting some data out of the system or using it for a little demo
+5- Running the API
+- You can browse your local site and explore all the endpoint that the API contain using Swagger
 
-## Running the tests
+![image](https://user-images.githubusercontent.com/67849830/116789596-97d6c200-aa7d-11eb-949e-7df4c358702e.png)
 
-Explain how to run the automated tests for this system
+6- Testing the End Points
+- You can use Postman v8.3.0 [Download](https://www.postman.com/downloads/)
 
-### Break down into end to end tests
+![image](https://user-images.githubusercontent.com/67849830/116789772-8e018e80-aa7e-11eb-9166-b226b5439716.png)
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Eduardo Curiel** - *Initial work* - [eecuriel](https://github.com/eecuriel)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+You want to be a contributor?.  Write me :).
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU License - see the [gnu.md](https://github.com/eecuriel/Project-API/files/6410171/gnu.md) file for details 
 
 ## Acknowledgments
 
 * Hat tip to anyone whose code was used
 * Inspiration
-* etc
+* All constructive comments are welcomeAll constructed comment are welcome
