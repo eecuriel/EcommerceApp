@@ -1,8 +1,20 @@
 # Ecommerce application
 
-This is a base version of an API to manage the business rules and master data for a Ecommerce application.  The actual state of it is  "in developing" project and the progress will be updated frecuently.
+This is a base version of my own Ecommerce application.  The actual state of it is  "in developing" project and the progress will be updated frecuently. 
+
+This project is been construing as a PWA (Progressive Web Application) in order give to the user altenatives to manage it into a mobile divices and use several functionalities that only exist those kind of enviroment, such as:
+
+- Best perfomance
+- Offline work mode.
+- Full responsiveness and browser compatibility. 
+- Connectivity independence. 
+- App-like interface.
+- Push notifications. 
+- Self-updates. 
+- Safety.
 
 This project will contain the following functionalities:
+
 - Multiple Store creation and adminitration
 - Product Catalog
 - Shopping cart
@@ -16,18 +28,10 @@ This project will contain the following functionalities:
 
 This first version can manage:
 
-- Data base interaction. You can use Entity Framerwork migration to create all the entities needs into a MS SQL database
-- Email Service.
-- Image files upload service
-- JWT bearer token
-- Authorization and Authentication model
-- Swagger
-- UserIdentity schema
-
-End points for:
-- Store creation
 - User registration
-- User profile update
+- Store creation
+- Store profile administration
+
 
 ## Getting Started
 
