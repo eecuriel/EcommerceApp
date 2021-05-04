@@ -1356,7 +1356,11 @@ C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\ItemCategoryPage.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\ItemsPage.razor.g.cs
 C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Pages\ItemTypePage.razor.g.cs
-C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Shared\CrudItemCategory.razor.g.cs
-C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\CrudItemCategory.razor.g.cs
-C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Shared\ItemCategoryForm.razor.g.cs
-C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\ItemCategoryForm.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Shared\CrudItemType.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\RazorDeclaration\Shared\ItemTypeForm.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\CrudItemType.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\Razor\Shared\ItemTypeForm.razor.g.cs
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin\Debug\net5.0\wwwroot\service-worker-assets.js
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\bin\Debug\net5.0\wwwroot\service-worker.js
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\serviceworkers\wwwroot\service-worker.js
+C:\Users\eduar\Documents\Proyectos 2021\04 Haddie\03 Realization\AdminPortal\obj\Debug\net5.0\service-worker-assets.js

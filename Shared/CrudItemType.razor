@@ -1,24 +1,24 @@
 
-
-
 <!-- Begin Page Content -->
         <div class="container-fluid">
-        <div  class="float-start">
-            <h3 class="m-0 font-weight-bold text-primary text-end">@CrudName</h3>
-        </div>
+        
         <!-- DataTales Example -->
+    
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-            <div class="float-end">
-                <Button class="btn btn-success btn-icon-split" Clicked="@NewItemShowModal" >
-                    <span class="icon text-white-50">
-                    <i class="fas fa-plus"></i>
-                    </span>
-                    <span class="text">New @CrudName</span>
-                </Button>
+                <div  class="float-start">
+                <h3 class="m-0 font-weight-bold text-primary text-end">@CrudName</h3>
+                </div>
+                <div class="position-absolute top-0 end-0" style="right: 0;">
+                    <Button class="btn btn-success btn-icon-split" Clicked="@NewItemShowModal" >
+                        <span class="icon text-white-50">
+                        <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="text">New @CrudName</span>
+                    </Button>
+                </div>
             </div>
             
-            </div>
             <div class="card-body">
             <Table Hoverable="true">
                 <TableHeader>
@@ -58,7 +58,7 @@
                 <CloseButton />
             </ModalHeader>
             <ModalBody>
-                <ItemCategoryForm/>
+                <ItemTypeForm OnValidSubmit="itemTypeRegistration" itemTypeData="itemsType" />
             </ModalBody>
             <ModalFooter>
                 <Button Color="Color.Secondary" Clicked="@NewItemHideModal">Close</Button>
@@ -76,7 +76,7 @@
                 <CloseButton />
             </ModalHeader>
             <ModalBody>
-                <ItemCategoryForm/>
+                <ItemTypeForm OnValidSubmit="itemTypeRegistration" itemTypeData="itemsType" />
             </ModalBody>
             <ModalFooter>
                 <Button Color="Color.Secondary" Clicked="@EditItemHideModal">Close</Button>
@@ -103,8 +103,15 @@
 
 @code {
     [Parameter] public string CrudName {get; set;}
+    private ItemsType itemsType = new ItemsType();
+
     private int RowNumber = 5;
-       // reference to the modal component
+
+    private async void itemTypeRegistration(){
+
+        
+    }
+    // reference to the modal component
     private Modal NewItemModal;
     private Modal EdititemModal;
 
@@ -133,7 +140,6 @@
     {
         DeleteAlertModal.Show();
     }
-
     private void DeleteAlertHideModal()
     {
         DeleteAlertModal.Hide();
