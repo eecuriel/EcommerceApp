@@ -45,9 +45,15 @@ You can fork the repositroy or download it for your use.  If you want to collabo
 - Project API installed.  You can see the instructions here [Ecommerce API](https://github.com/eecuriel/Project-API.git)
 
 Differents point of view:
+
+
 Web :
+
 ![image](https://user-images.githubusercontent.com/67849830/117068564-7124bf80-acf9-11eb-814d-fb9abec7c8ed.png)
 
+Desktop PWA :
+
+![image](https://user-images.githubusercontent.com/67849830/117068775-b5b05b00-acf9-11eb-8478-4a6bf0762d8b.png)
 
 
 ### Installing
