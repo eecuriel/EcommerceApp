@@ -57,7 +57,7 @@ Desktop PWA :
 
 Mobile Pwa:
 
-![image](https://user-images.githubusercontent.com/67849830/117073640-35d9bf00-ad00-11eb-83fc-4c9819b5fb6a.png)
+
 
 
 ### Installing
