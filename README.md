@@ -77,14 +77,13 @@ Important :
 ![image](https://user-images.githubusercontent.com/67849830/117538138-c9e2a980-afd2-11eb-83ab-dd96a9f156bf.png)
 
 
-4- Setting up the application
+4- Setting up  and test  the application
 
+Once the portal is configured, you must configure the appsettings.json file with the URL corresponding to your API project. 
 
+![image](https://user-images.githubusercontent.com/67849830/117538189-07dfcd80-afd3-11eb-8fe7-dd9cc2020a75.png)
 
-
-5- Testing the application
-
-
+You can use the API project to test this project too [Project API](https://github.com/eecuriel/Project-API)
 
 ## Authors
 
