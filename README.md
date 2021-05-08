@@ -55,9 +55,6 @@ Desktop PWA :
 
 ![image](https://user-images.githubusercontent.com/67849830/117068775-b5b05b00-acf9-11eb-8478-4a6bf0762d8b.png)
 
-Mobile Pwa:
-
-
 
 
 ### Installing
@@ -77,7 +74,8 @@ Important :
 - The application pool must be "NetCore" that can appear once you install .Net Core Hosting Bundle
 - Is not mandatory use a SSL certificate for testing propose.  If you want to test it, if is the case, you can use the developer certificate provided by your IIS installation.
 
-![image](https://user-images.githubusercontent.com/67849830/116789284-24808080-aa7c-11eb-9e09-0c5394fec5e2.png)
+![image](https://user-images.githubusercontent.com/67849830/117538138-c9e2a980-afd2-11eb-83ab-dd96a9f156bf.png)
+
 
 4- Setting up the application
 
